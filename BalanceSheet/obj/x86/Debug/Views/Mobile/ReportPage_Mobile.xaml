@@ -1,0 +1,621 @@
+﻿    <Page x:ConnectionId='1'
+    x:Class="BalanceSheet.Views.Mobile.ReportPage_Mobile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Views.Mobile"
+    xmlns:controls="using:BalanceSheet.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:BalanceSheet.Models"
+    xmlns:converter="using:BalanceSheet.ValueConverters"
+    mc:Ignorable="d"  FontFamily="Segoe Print" Margin="0,-23,0,0">
+
+    <Page.BottomAppBar>
+        <CommandBar Foreground="White" 
+                    HorizontalAlignment="Stretch">
+            <CommandBar.Background>
+                <SolidColorBrush Color="#FF08709E"/>
+            </CommandBar.Background>
+            <AppBarButton x:ConnectionId='2' x:Uid="SelectItmesBtn" x:Name="SelectItmesBtn" 
+                          Foreground="White" 
+                          FontFamily="Segoe Print" 
+                                                      >
+                <AppBarButton.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" 
+                              Glyph="&#xe762;" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton x:ConnectionId='3' x:Uid="DeleteItemsBtn" x:Name="DeleteItemsBtn" 
+                          Foreground="White" 
+                          FontFamily="Segoe Print" 
+                          Icon="Delete" 
+                                                       />
+            <AppBarButton x:ConnectionId='4' x:Uid="CancelSelectionBtn" x:Name="CancelSelectionBtn"
+                          FontFamily="Segoe Print" 
+                          Foreground="White" 
+                          Icon="Cancel" 
+                                                           />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+
+    <Page.Resources>
+
+        <converter:NameFromRessourceConverter x:ConnectionId='5' x:Name="NameFromRessourceFormatConverter"/>
+
+        <!-- When using x:Bind, you need to set x:DataType -->
+        <DataTemplate x:ConnectionId='6' x:Name="BalanceListViewTemplateWithUnderCategory" 
+                                                   >
+            <Grid x:ConnectionId='11'>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:ConnectionId='12' Foreground="White"
+                           Grid.RowSpan="2"
+                           Width="90"
+                                                
+                           TextAlignment="Right"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                         />
+                <TextBlock x:ConnectionId='13' Foreground="White" 
+                           Grid.Column="1"
+                                                
+                                         FontFamily="Segoe Print"
+                           Style="{ThemeResource BaseTextBlockStyle}"
+                           Margin="12,6,0,0"/>
+                <TextBlock x:Name="txtTemplateUnderCategory" Foreground="White"
+                           Grid.Column="1" FontFamily="Segoe Print"
+                            Grid.Row="1"
+                            Text="{Binding UnderCategory, Mode=OneWay, 
+                            Converter={StaticResource NameFromRessourceFormatConverter}}" 
+                            Style="{ThemeResource BodyTextBlockStyle}"
+                            Margin="12,0,0,6"/>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:ConnectionId='7' x:Name="BalanceListViewTemplateWithoutUnderCategory" 
+                                                   >
+            <Grid x:ConnectionId='8'>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:ConnectionId='9' Foreground="White"
+                           Width="90"
+                                                
+                           TextAlignment="Right"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                         />
+                <TextBlock x:ConnectionId='10' Foreground="White" 
+                           Grid.Column="1" FontSize="16" VerticalAlignment="Center"
+                                                
+                                        FontFamily="Segoe Print"
+                           Style="{ThemeResource BaseTextBlockStyle}"
+                           Margin="12,0,0,0"/>
+            </Grid>
+        </DataTemplate>
+
+
+    </Page.Resources>
+
+    <Grid x:ConnectionId='14' x:Name="mainGrid" Background="#FF119DDA" Margin="0">
+       
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <!--175 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1007" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="84"/>
+                        <Setter Target="rowSecond.Height" Value="84"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+                <!--150 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="74"/>
+                        <Setter Target="rowSecond.Height" Value="74"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+                <!--125 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="360" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="62"/>
+                        <Setter Target="rowSecond.Height" Value="62"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+                <!--100 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="48"/>
+                        <Setter Target="rowSecond.Height" Value="48"/>
+                        <Setter Target="datePicker.Margin" Value="5,10,5,5"/>
+                        <Setter Target="gridButton.Margin" Value="5,5,5,5"/>
+                        <Setter Target="listView.Margin" Value="5,5,5,10"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:ConnectionId='15' x:Name="BalanceDetailsStatesGroup">
+                <VisualState x:ConnectionId='16' x:Name="BalanceState">
+                    <VisualState.Setters>
+                        <Setter Target="FixkostenListView.SelectionMode" Value="None" />
+                        <Setter Target="FixkostenListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="LebensmittelListView.SelectionMode" Value="None" />
+                        <Setter Target="LebensmittelListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="AutoListView.SelectionMode" Value="None" />
+                        <Setter Target="AutoListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="BildungListView.SelectionMode" Value="None" />
+                        <Setter Target="BildungListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="AppListView.SelectionMode" Value="None" />
+                        <Setter Target="AppListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="UrlaubListView.SelectionMode" Value="None" />
+                        <Setter Target="UrlaubListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="UnterhaltungListView.SelectionMode" Value="None" />
+                        <Setter Target="UnterhaltungListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="HausListView.SelectionMode" Value="None" />
+                        <Setter Target="HausListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="VerkehrListView.SelectionMode" Value="None" />
+                        <Setter Target="VerkehrListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="PersonalListView.SelectionMode" Value="None" />
+                        <Setter Target="PersonalListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="SonstAusgabeListView.SelectionMode" Value="None" />
+                        <Setter Target="SonstAusgabeListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="GehaltListView.SelectionMode" Value="None" />
+                        <Setter Target="GehaltListView.IsItemClickEnabled" Value="True" />
+                        <Setter Target="SonstEinkommenListView.SelectionMode" Value="None" />
+                        <Setter Target="SonstEinkommenListView.IsItemClickEnabled" Value="True" />
+                        
+                        <!--#region App Bar Commands-->
+                        <Setter Target="SelectItmesBtn.Visibility" Value="Visible" />
+                        <Setter Target="DeleteItemsBtn.Visibility" Value="Collapsed" />
+                        <Setter Target="CancelSelectionBtn.Visibility" Value="Collapsed" />
+                        <!--#endregion-->
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='17' x:Name="BalanceDetailsState">
+                    <VisualState.Setters>
+                        <Setter Target="FixkostenListView.SelectionMode" Value="Extended" />
+                        <Setter Target="FixkostenListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="LebensmittelListView.SelectionMode" Value="Extended" />
+                        <Setter Target="LebensmittelListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="AutoListView.SelectionMode" Value="Extended" />
+                        <Setter Target="AutoListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="BildungListView.SelectionMode" Value="Extended" />
+                        <Setter Target="BildungListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="AppListView.SelectionMode" Value="Extended" />
+                        <Setter Target="AppListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="UrlaubListView.SelectionMode" Value="Extended" />
+                        <Setter Target="UrlaubListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="UnterhaltungListView.SelectionMode" Value="Extended" />
+                        <Setter Target="UnterhaltungListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="HausListView.SelectionMode" Value="Extended" />
+                        <Setter Target="HausListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="VerkehrListView.SelectionMode" Value="Extended" />
+                        <Setter Target="VerkehrListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="PersonalListView.SelectionMode" Value="Extended" />
+                        <Setter Target="PersonalListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="SonstAusgabeListView.SelectionMode" Value="Extended" />
+                        <Setter Target="SonstAusgabeListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="GehaltListView.SelectionMode" Value="Extended" />
+                        <Setter Target="GehaltListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="SonstEinkommenListView.SelectionMode" Value="Extended" />
+                        <Setter Target="SonstEinkommenListView.IsItemClickEnabled" Value="False" />
+
+                        <!--#region App Bar Commands-->
+                        <Setter Target="SelectItmesBtn.Visibility" Value="Visible" />
+                        <Setter Target="DeleteItemsBtn.Visibility" Value="Visible" />
+                        <Setter Target="CancelSelectionBtn.Visibility" Value="Collapsed" />
+                        <!--#endregion-->
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='18' x:Name="ExtendedSelectionState">
+                    <VisualState.Setters>
+                        <!--#region App Bar Commands-->
+                        <Setter Target="SelectItmesBtn.Visibility" Value="Collapsed" />
+                        <Setter Target="DeleteItemsBtn.Visibility" Value="Visible" />
+                        <Setter Target="CancelSelectionBtn.Visibility" Value="Visible" />
+                        <!--#endregion-->
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='19' x:Name="MultipleSelectionState">
+                    <VisualState.Setters>
+                        <Setter Target="FixkostenListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="FixkostenListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="LebensmittelListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="LebensmittelListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="AutoListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="AutoListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="BildungListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="BildungListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="AppListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="AppListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="UrlaubListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="UrlaubListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="UnterhaltungListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="UnterhaltungListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="HausListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="HausListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="VerkehrListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="VerkehrListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="PersonalListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="PersonalListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="SonstAusgabeListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="SonstAusgabeListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="GehaltListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="GehaltListView.IsItemClickEnabled" Value="False" />
+                        <Setter Target="SonstEinkommenListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="SonstEinkommenListView.IsItemClickEnabled" Value="False" />
+
+                        <!--#region App Bar Commands-->
+                        <Setter Target="SelectItmesBtn.Visibility" Value="Collapsed" />
+                        <Setter Target="DeleteItemsBtn.Visibility" Value="Visible" />
+                        <Setter Target="CancelSelectionBtn.Visibility" Value="Visible" />
+                        <!--#endregion-->
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid x:ConnectionId='20' x:Name="gridContentMain">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="0,25,0,5">
+                <controls:UserControlHeader x:ConnectionId='62'                                                                          />
+            </Grid>
+
+            <Grid x:ConnectionId='21' x:Name="gridPivot" Grid.Row="1">
+                <Pivot x:ConnectionId='22' x:Name="pivotMain" FontFamily="Segoe Print" Foreground="White" Margin="0,5" >
+                    <PivotItem x:ConnectionId='23' x:Name="pivotFixKosten" Header="Fixkosten" Margin="0">
+                        <Grid x:ConnectionId='60' x:Name="gridFixkosten" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='61' x:Name="FixkostenListView" 
+                                      SelectionMode="Extended"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0" 
+                                                                        
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='24' x:Name="pivotLebensmittel" Header="Lebensmittel" Margin="0" >
+                        <Grid x:ConnectionId='58' x:Name="gridLebensmittel" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='59' x:Name="LebensmittelListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                                     
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='25' x:Name="pivotAuto" Header="Auto" Margin="0">
+                        <Grid x:ConnectionId='56' x:Name="gridAuto" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='57' x:Name="AutoListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                             
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='26' x:Name="pivotBildung" Header="Bildung" Margin="0">
+                        <Grid x:ConnectionId='54' x:Name="gridBildung" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='55' x:Name="BildungListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithoutUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                                
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='27' x:Name="pivotApp" Header="Apps/Service" Margin="0">
+                        <Grid x:ConnectionId='52' x:Name="gridApp" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='53' x:Name="AppListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithoutUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                            
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='28' x:Name="pivotUrlaub" Header="Urlaub" Margin="0">
+                        <Grid x:ConnectionId='50' x:Name="gridUrlaub" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='51' x:Name="UrlaubListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithoutUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                               
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='29' x:Name="pivotUnterhaltung" Header="Unterhaltung" Margin="0">
+                        <Grid x:ConnectionId='48' x:Name="gridUnterhaltung" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='49' x:Name="UnterhaltungListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                                     
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='30' x:Name="pivotHaus" Header="Für Haus" Margin="0">
+                        <Grid x:ConnectionId='46' x:Name="gridHaus" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='47' x:Name="HausListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithoutUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                             
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='31' x:Name="pivotVerkehr" Header="Verkehr" Margin="0">
+                        <Grid x:ConnectionId='44' x:Name="gridVerkehr" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='45' x:Name="VerkehrListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                                
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='32' x:Name="pivotPersonal" Header="Personal" Margin="0">
+                        <Grid x:ConnectionId='42' x:Name="gridPeronal" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='43' x:Name="PersonalListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                                 
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='33' x:Name="pivotSonstAusgaben" Header="Sonstige Ausgaben" Margin="0">
+                        <Grid x:ConnectionId='40' x:Name="gridSonstAusgaben" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='41' x:Name="SonstAusgabeListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithoutUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                                     
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='34' x:Name="pivotGehalt" Header="Gehalt" Margin="0">
+                        <Grid x:ConnectionId='38' x:Name="gridGehalt" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='39' x:Name="GehaltListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithoutUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                               
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='35' x:Name="pivotSonstEinkommen" Header="Sonstige Einkommen" Margin="0">
+                        <Grid x:ConnectionId='36' x:Name="gridSonstEinkommen" VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='37' x:Name="SonstEinkommenListView" 
+                                      SelectionMode="Single"
+                                                                           
+                                      IsItemClickEnabled="True"
+                                      ItemsSource="{Binding}"
+                                      ItemTemplate="{StaticResource BalanceListViewTemplateWithoutUnderCategory }"
+                                      ShowsScrollingPlaceholders="False"
+                                                             
+                                      Margin="1,0"                                       
+                                                                                                         >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="1,0"/>
+                                        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                                        <Setter Property="BorderBrush" Value="White"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                </Pivot>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+

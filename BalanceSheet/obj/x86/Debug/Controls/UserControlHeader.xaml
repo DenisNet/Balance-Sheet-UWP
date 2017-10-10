@@ -1,0 +1,41 @@
+﻿<UserControl x:ConnectionId='1'     
+    x:Name="controlRoot"
+    x:Class="BalanceSheet.Controls.UserControlHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="48"
+    VerticalAlignment="Top"
+    VerticalContentAlignment="Top"
+    HorizontalAlignment="Stretch"
+    HorizontalContentAlignment="Stretch"
+    xmlns:converter="using:BalanceSheet.ValueConverters"
+    FontFamily="Segoe Print"
+    >
+    <UserControl.Resources>
+        <converter:NumberFormatConverter x:ConnectionId='2' x:Name="NumberConverter"/>
+    </UserControl.Resources>
+
+    <Grid x:ConnectionId='3' x:Name="grid">
+        <Grid>
+            <Grid HorizontalAlignment="Right" VerticalAlignment="Center"
+                Visibility="Visible" >
+                <Grid x:ConnectionId='4' x:Name="gridContainer" Margin="0,0,12,0">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right"
+                            Margin="12,6">
+                        <TextBlock x:Uid="IhreBalance" Margin="0,0,6,0" Foreground="White"
+                                   FontWeight="Normal" VerticalAlignment="Center"/>
+
+                        <TextBlock x:ConnectionId='5' x:Name="txtPrice"
+                                   Text="{Binding BalanceWert, ElementName=controlRoot, Converter={StaticResource NumberConverter}}" 
+                                   FontSize="16" FontWeight="Bold" FontFamily="Segoe Print"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
+

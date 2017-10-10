@@ -1,0 +1,136 @@
+﻿<local:BasePage
+    x:Class="BalanceSheet.Views.HomePage_Mobile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:BalanceSheet.Controls"
+    xmlns:charting="using:BalanceSheet.Controls.Chart"
+    mc:Ignorable="d"
+    x:Name="pageRoot" Margin="0,-23,0,0">
+
+    <Grid Background="#FF119DDA" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="0,25,0,0">
+            <controls:UserControlHeader BalanceWert="{x:Bind datenViewModel.BalanceForYearProperty, Mode=OneWay}"/>
+        </Grid>
+        <Rectangle Grid.Row="1" Height="1" Fill="White" Margin="5,15,5,0"/>
+        <Grid Grid.Row="2" VerticalAlignment="Top" 
+              HorizontalAlignment="Stretch" Margin="5,5,5,0"
+              Background="#119DDA">
+            <Button x:Name="BtnMonatAuswahl" Grid.Column="1"
+                    Background="#FF119DDA" Foreground="White" 
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center" Width="170" Height="40"
+                    FontSize="16" BorderBrush="White" BorderThickness="1"
+                    Click="BtnMonatAuswahl_Click" FontFamily="Segoe Print" 
+                    />
+        </Grid>
+        
+        <Rectangle Grid.Row="3" Height="1" Fill="White" Margin="5,0,5,0"/>
+        <Grid Grid.Row="4" VerticalAlignment="Top"
+              HorizontalAlignment="Stretch" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    Height="70"
+                    Background="#CC3333" Foreground="White"
+                    HorizontalAlignment="Stretch"
+                    FontSize="16" Margin="15,10"
+                    BorderThickness="0"
+                    Click="BtnAusgbe_Click"
+                    Style="{StaticResource RundeButtonUserStyle}" FontWeight="Normal" FontFamily="Segoe Print"
+                    >
+                <Button.Content>
+                    <TextBlock x:Name="BtnTxtAusgbe" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Width="80"/>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="1" 
+                    Height="70" 
+                    Background="#FF339933" Foreground="White"
+                    HorizontalAlignment="Stretch"
+                    FontSize="16" Margin="15,10" 
+                    BorderThickness="0"
+                    Click="BtnEinnahme_Click"
+                    Style="{StaticResource RundeButtonUserStyle}" FontFamily="Segoe Print" FontWeight="Thin">
+                <Button.Content>
+                    <TextBlock x:Name="BtnTxtEinnahme" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Width="80"/>
+                </Button.Content>
+            </Button>
+        </Grid>
+        
+        <Rectangle Grid.Row="5" Height="1" Fill="White" Margin="5"/>
+        <Grid Grid.Row="6" VerticalAlignment="Top"
+              HorizontalAlignment="Stretch" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="txtBalanceText" Text="Balance" FontSize="16" 
+                       Foreground="White" Margin="20,0,0,0" FontFamily="Segoe Print"/>
+            <TextBlock x:Name="txtBalance" Grid.Column="1" 
+                       Foreground="#FF7DF958" 
+                       FontSize="16" HorizontalAlignment="Right" 
+                       Margin="0,0,30,0" FontFamily="Segoe Print"/>
+        </Grid>
+
+        <Rectangle Grid.Row="7" Height="1" Fill="White" Margin="5"/>
+        <Grid Grid.Row="8" VerticalAlignment="Top"
+              HorizontalAlignment="Stretch" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="txtIncomeText"  Text="Einnahmen" FontSize="16" 
+                       Foreground="White" Margin="20,0,0,0" FontFamily="Segoe Print"/>
+            <TextBlock x:Name="txtEinnahme" Grid.Column="1" 
+                       Foreground="#FF7DF958" 
+                       FontSize="16" HorizontalAlignment="Right" 
+                       Margin="0,0,30,0" FontFamily="Segoe Print"/>
+        </Grid>
+        
+        <Rectangle Grid.Row="9" Height="1" Fill="White" Margin="5"/>
+        <Grid Grid.Row="10" VerticalAlignment="Top"
+              HorizontalAlignment="Stretch" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="txtCostText" Text="Ausgaben" FontSize="16" 
+                       Foreground="White" Margin="20,0,0,0" FontFamily="Segoe Print"/>
+            <TextBlock x:Name="txtAusgabe" Grid.Column="1" 
+                       Foreground="#CC3333" 
+                       FontSize="16" HorizontalAlignment="Right" 
+                       Margin="0,0,30,0" FontFamily="Segoe Print"/>
+        </Grid>
+        
+        <Rectangle Grid.Row="11" Height="1" Fill="White" Margin="5"/>
+        <Grid Grid.Row="12" VerticalAlignment="Top"
+              HorizontalAlignment="Stretch" Margin="0">
+            <charting:ChartsModelDaten
+                x:Name="PieChart" DataContext="{Binding}" 
+                HorizontalAlignment="Center"
+                Height="100"
+                             VerticalAlignment="Top" Margin="15,5,20,5"
+                             FontFamily="Segoe Print">
+            </charting:ChartsModelDaten>
+        </Grid>
+    </Grid>
+</local:BasePage>

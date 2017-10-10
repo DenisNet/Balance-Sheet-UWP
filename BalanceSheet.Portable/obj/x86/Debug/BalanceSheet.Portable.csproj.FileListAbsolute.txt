@@ -1,0 +1,17 @@
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\bin\x86\Debug\BalanceSheet.Portable.dll
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\bin\x86\Debug\BalanceSheet.Portable.pdb
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\bin\x86\Debug\BalanceSheet.Portable.pri
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\BalanceSheet.Portable.csprojResolveAssemblyReference.cache
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\BalanceSheet.Portable.dll
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\BalanceSheet.Portable.pdb
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\priconfig.xml
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\layout.resfiles
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\layout.resfiles.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\resources.resfiles
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\pri.resfiles
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\qualifiers.txt
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt

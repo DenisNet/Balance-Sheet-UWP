@@ -1,0 +1,2 @@
+C:\Users\Denis\Documents\Visual Studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\Portable.csproj;x86
+C:\Users\Denis\Documents\Visual Studio 2015\Projects\BalanceSheet\BalanceSheet\BalanceSheet.csproj;x86

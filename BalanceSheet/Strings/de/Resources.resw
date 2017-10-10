@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accessoires" xml:space="preserve">
+    <value>Accessoires</value>
+  </data>
+  <data name="AppName.Text" xml:space="preserve">
+    <value>Balance Sheet</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Bakery" xml:space="preserve">
+    <value>Backwaren</value>
+  </data>
+  <data name="Bank" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <data name="Cafe" xml:space="preserve">
+    <value>Cafe</value>
+  </data>
+  <data name="Cosmetics" xml:space="preserve">
+    <value>Kosmetik</value>
+  </data>
+  <data name="Costs" xml:space="preserve">
+    <value>Ausgaben</value>
+  </data>
+  <data name="Dress" xml:space="preserve">
+    <value>Kleidung</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>Getränke</value>
+  </data>
+  <data name="Entertainment" xml:space="preserve">
+    <value>Unterhaltung</value>
+  </data>
+  <data name="Extracosts" xml:space="preserve">
+    <value>Nebenkosten</value>
+  </data>
+  <data name="Fine" xml:space="preserve">
+    <value>Bußgeld</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>Fixkosten</value>
+  </data>
+  <data name="Flightticket" xml:space="preserve">
+    <value>Flugticket</value>
+  </data>
+  <data name="Foods" xml:space="preserve">
+    <value>Lebensmittel</value>
+  </data>
+  <data name="FruitVegetabele" xml:space="preserve">
+    <value>Obst und Gemüse</value>
+  </data>
+  <data name="Fuel" xml:space="preserve">
+    <value>Kraftstoff</value>
+  </data>
+  <data name="Groundshuld" xml:space="preserve">
+    <value>Grundschuld</value>
+  </data>
+  <data name="Hairdressing" xml:space="preserve">
+    <value>Friseursalon</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="IhreBalance.Text" xml:space="preserve">
+    <value>Ihre Balance:</value>
+  </data>
+  <data name="InsuranceFix" xml:space="preserve">
+    <value>Versicherung</value>
+  </data>
+  <data name="Internet" xml:space="preserve">
+    <value>Internet</value>
+  </data>
+  <data name="Kino" xml:space="preserve">
+    <value>Kino</value>
+  </data>
+  <data name="Meat" xml:space="preserve">
+    <value>Fleisch</value>
+  </data>
+  <data name="Medicine" xml:space="preserve">
+    <value>Medizin</value>
+  </data>
+  <data name="Meer" xml:space="preserve">
+    <value>Meeresprodukte</value>
+  </data>
+  <data name="Milk" xml:space="preserve">
+    <value>Milchprodukte</value>
+  </data>
+  <data name="Monthlyticket" xml:space="preserve">
+    <value>Monatsticket</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Sonstige</value>
+  </data>
+  <data name="OtherCosts" xml:space="preserve">
+    <value>Sonstige Ausgaben</value>
+  </data>
+  <data name="OtherIncomes" xml:space="preserve">
+    <value>Sonstige Einkommen</value>
+  </data>
+  <data name="Pizza" xml:space="preserve">
+    <value>Pizza</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Private Kosten</value>
+  </data>
+  <data name="Rental" xml:space="preserve">
+    <value>Miete</value>
+  </data>
+  <data name="Repair" xml:space="preserve">
+    <value>Reparatur kosten</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Bericht</value>
+  </data>
+  <data name="Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="Salary" xml:space="preserve">
+    <value>Gehalt</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="SingIn" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="Singleticket" xml:space="preserve">
+    <value>Einzelticket</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistik</value>
+  </data>
+  <data name="Sweetnes" xml:space="preserve">
+    <value>Süßigkeit</value>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Steuer</value>
+  </data>
+  <data name="Taxi" xml:space="preserve">
+    <value>Taxi</value>
+  </data>
+  <data name="Telefons" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="Theatre" xml:space="preserve">
+    <value>Theater</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Heute</value>
+  </data>
+  <data name="Trainticket" xml:space="preserve">
+    <value>Bahnticket</value>
+  </data>
+  <data name="Transport" xml:space="preserve">
+    <value>Verkehr</value>
+  </data>
+  <data name="TV" xml:space="preserve">
+    <value>TV</value>
+  </data>
+  <data name="Wash" xml:space="preserve">
+    <value>Waschen</value>
+  </data>
+  <data name="WelcomePage_ButtonStart_Text" xml:space="preserve">
+    <value>Los geht's!</value>
+  </data>
+  <data name="WelcomePage_Instruction1_Content" xml:space="preserve">
+    <value>{0} ermöglicht Ihnen, Ihre Einnahmen und Ausgaben unter Kontrolle zu halten.</value>
+  </data>
+  <data name="WelcomePage_Instruction1_Title" xml:space="preserve">
+    <value>Herzlich willkommen</value>
+  </data>
+  <data name="WelcomePage_Instruction2_Content" xml:space="preserve">
+    <value>Durchsuchen Sie Ihre Ausgaben und Einnahmen des Tages, es ist ganz einfach!</value>
+  </data>
+  <data name="WelcomePage_Instruction2_Title" xml:space="preserve">
+    <value>Explore</value>
+  </data>
+  <data name="WelcomePage_Instruction3_Content" xml:space="preserve">
+    <value>Verwenden Sie die Navigationsleiste, um schnell auf Ihre Daten zugreifen.</value>
+  </data>
+  <data name="WelcomePage_Instruction3_Title" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="WelcomePage_Instruction4_Content" xml:space="preserve">
+    <value>Das war einfach, richtig? Sie sollten bereit sein, Ihre erste Eintrag in Balance Sheet tun.</value>
+  </data>
+  <data name="WelcomePage_Instruction4_Title" xml:space="preserve">
+    <value>Bereit?</value>
+  </data>
+  <data name="Wellness" xml:space="preserve">
+    <value>Wellness</value>
+  </data>
+  <data name="BtnCostsHome" xml:space="preserve">
+    <value>Neue Ausgaben</value>
+  </data>
+  <data name="BtnIncomesHome" xml:space="preserve">
+    <value>Neue Einnahme</value>
+  </data>
+  <data name="TxtBalanceHome" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="TxtCostsHome" xml:space="preserve">
+    <value>Ausgaben</value>
+  </data>
+  <data name="TxtIncomesHome" xml:space="preserve">
+    <value>Einkommen</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>Keine Daten gefunden</value>
+  </data>
+  <data name="Apps" xml:space="preserve">
+    <value>Apps and Service</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Bildung</value>
+  </data>
+  <data name="House" xml:space="preserve">
+    <value>Für Haus</value>
+  </data>
+  <data name="Vacation" xml:space="preserve">
+    <value>Urlaub</value>
+  </data>
+  <data name="OtherAuto" xml:space="preserve">
+    <value>Sonstige</value>
+  </data>
+  <data name="OtherEntertainment" xml:space="preserve">
+    <value>Sonstige</value>
+  </data>
+  <data name="OtherFix" xml:space="preserve">
+    <value>Sonstige</value>
+  </data>
+  <data name="OtherFoods" xml:space="preserve">
+    <value>Sonstige</value>
+  </data>
+  <data name="OtherPrivate" xml:space="preserve">
+    <value>Sonstige</value>
+  </data>
+  <data name="OtherTransport" xml:space="preserve">
+    <value>Sonstige</value>
+  </data>
+  <data name="BtnCancel.Content" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="BtnNext" xml:space="preserve">
+    <value>Weiter</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="CancelSelectionBtn.Label" xml:space="preserve">
+    <value>Abbrechen</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="CheckGleichDatumInterval" xml:space="preserve">
+    <value>Für alle Kategorie gleiche Datum oder  Datumsbereich wählen</value>
+  </data>
+  <data name="CheckInterval" xml:space="preserve">
+    <value>Datumsbereich wählen</value>
+  </data>
+  <data name="CmBoxItemCost.Content" xml:space="preserve">
+    <value>Ausgaben</value>
+  </data>
+  <data name="CmBoxItemIncome.Content" xml:space="preserve">
+    <value>Einkommen</value>
+  </data>
+  <data name="DeleteItemsBtn.Label" xml:space="preserve">
+    <value>Löschen</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="DialogContent" xml:space="preserve">
+    <value>Möchten Sie die Daten wirklich löschen?</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="InsuranceAuto" xml:space="preserve">
+    <value>Versicherung</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nein</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="SelectItmesBtn.Label" xml:space="preserve">
+    <value>Wählen</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="TtlDelete" xml:space="preserve">
+    <value>Löschen</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="TxtChoose" xml:space="preserve">
+    <value>Bitte wählen Sie Ihr gewünschte Datum, oder ein Datumsbereich</value>
+  </data>
+  <data name="TxtPrice" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="HelpPage_Instruction1_Content" xml:space="preserve">
+    <value>Sie können Ihre Kosten und Einkommen leicht nachschauen</value>
+  </data>
+  <data name="HelpPage_Instruction2_Content" xml:space="preserve">
+    <value>Sie können leicht erkennen, wo Sie Ihr Geld mehr ausgeben haben</value>
+  </data>
+  <data name="MonatWahl.Text" xml:space="preserve">
+    <value>Wählen Sie bitte Monat</value>
+  </data>
+</root>

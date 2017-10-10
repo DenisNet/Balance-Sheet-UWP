@@ -1,0 +1,3289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfGantt.UWP</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.BoolToIconConverter">
+            <summary>
+            Converts Boolean to Image Source and vice versa.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.DateTimeFormatConverter">
+            <summary>
+            Converts the DateTime to String and viceversa.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.DurationValueConverter">
+            <summary>
+            Converts the Double to String and vicevera.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.CollectionValueConverter">
+            <summary>
+            Converts the predecessors or resources to string and vice versa.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.PercentageConverter">
+            <summary>
+            Appends the % symbol to string.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.FontWeightConverter">
+            <summary>
+            Converter to customize the font weight to differentiate parent and child node in Gantt grid.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TreeGridPredecessorColumn">
+            <summary>
+            Represents a custom column to display predecessor collection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TreeGridPredecessorColumn.#ctor">
+            <summary>
+            Predecessor custom column constructor.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.PredecessorCellRenderer">
+            <summary>
+            Represents a custom cell renderer class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.PredecessorCellRenderer.OnInitializeDisplayElement(Syncfusion.UI.Xaml.TreeGrid.TreeDataColumnBase,Windows.UI.Xaml.Controls.TextBlock,System.Object)">
+            <summary>
+            Method called when display element intialized.
+            </summary>
+            <param name="dataColumn"></param>
+            <param name="uiElement"></param>
+            <param name="dataContext"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.PredecessorCellRenderer.OnUpdateDisplayBinding(Syncfusion.UI.Xaml.TreeGrid.TreeDataColumnBase,Windows.UI.Xaml.Controls.TextBlock,System.Object)">
+            <summary>
+            Method called to update the display binding.
+            </summary>
+            <param name="dataColumn"></param>
+            <param name="uiElement"></param>
+            <param name="dataContext"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.PredecessorCellRenderer.OnInitializeEditElement(Syncfusion.UI.Xaml.TreeGrid.TreeDataColumnBase,Windows.UI.Xaml.Controls.TextBox,System.Object)">
+            <summary>
+            Method called when editing element is intialized.
+            </summary>
+            <param name="dataColumn"></param>
+            <param name="uiElement"></param>
+            <param name="dataContext"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.PredecessorCellRenderer.OnEditingComplete(Syncfusion.UI.Xaml.TreeGrid.TreeDataColumnBase,Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            Method caled when editing action is completed.
+            </summary>
+            <param name="dataColumn"></param>
+            <param name="currentRendererElement"></param>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TreeGridResourceColumn">
+            <summary>
+            Represents a custom column to display resources.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ResouceCellRenderer">
+            <summary>
+            Represents a custom cell renderer class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ResouceCellRenderer.OnInitializeDisplayElement(Syncfusion.UI.Xaml.TreeGrid.TreeDataColumnBase,Windows.UI.Xaml.Controls.TextBlock,System.Object)">
+            <summary>
+            Method called when display element is intialized.
+            </summary>
+            <param name="dataColumn"></param>
+            <param name="uiElement"></param>
+            <param name="dataContext"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ResouceCellRenderer.GetControlValue">
+            <summary>
+            Gets the control value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ResouceCellRenderer.OnInitializeEditElement(Syncfusion.UI.Xaml.TreeGrid.TreeDataColumnBase,Syncfusion.UI.Xaml.Controls.Input.SfDropDownButton,System.Object)">
+            <summary>
+            Method called when edit element is initialized.
+            </summary>
+            <param name="dataColumn"></param>
+            <param name="uiElement"></param>
+            <param name="dataContext"></param>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.GanttGrid">
+            <summary>
+            Represents a control that can display the project infromation in table format.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttGrid.ScrollViewer_ViewChanged(System.Object,Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs)">
+            <summary>
+            Grid's scroll viewer changed.
+            </summary>
+            <param name="sender">The object.</param>
+            <param name="e">The scrollviewer view changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttGrid.RefreshResourcesColumn">
+            <summary>
+            To refresh the resources column.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.DataManager.IsRangeChanged">
+            <summary>
+            Gets or sets the bool value to indicate whether the timescale's range reseted or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.DataManager.ScrollOffset">
+            <summary>
+            To maintain the vertical scroll offset of the control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.DataManager.HeaderHeight">
+            <summary>
+            Gets or sets the header height of the grid and height of the timescale.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.DataManager.ScrollDate">
+            <summary>
+            Gets or sets the date to scroll the gantt chart horizontally.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.DataManager.InsertRecords(Syncfusion.UI.Xaml.Gantt.TaskDetail,System.Int32)">
+            <summary>
+            To insert the records.
+            </summary>
+            <param name="taskDetail">The newly added task detail.</param>
+            <param name="index">The index to be inserted.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.DataManager.AddSuccessor(Syncfusion.UI.Xaml.Gantt.TaskDetail,Syncfusion.UI.Xaml.Gantt.TaskDetail,Syncfusion.UI.Xaml.Gantt.TaskRelationship)">
+            <summary>
+            Adding the successor in the task.
+            </summary>
+            <param name="predecessorTask"></param>
+            <param name="successorTask"></param>
+            <param name="predecessor"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.DataManager.GenerateSuccessors(Syncfusion.UI.Xaml.Gantt.TaskDetail)">
+            <summary>
+            Method called to generate successor for a task.
+            </summary>
+            <param name="predecessorTask"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.DataManager.GenerateSuccessors">
+            <summary>
+            Method called to generate sucessors for a task when loading.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.IGanttTask.ID">
+            <summary>
+            Gets or sets the task id.
+            </summary>      
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.IGanttTask.Name">
+            <summary>
+            Gets or sets the name of the task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.IGanttTask.StartDate">
+            <summary>
+            Gets or sets the start date.
+            </summary>        
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.IGanttTask.FinishDate">
+            <summary>
+            Gets or sets the finish date.
+            </summary>       
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.IGanttTask.Duration">
+            <summary>
+            Gets or sets the duration.
+            </summary>       
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.IGanttTask.Predecessors">
+            <summary>
+            Gets or sets the predecessors.
+            </summary>        
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.IGanttTask.Resources">
+            <summary>
+            Gets or sets the resources.
+            </summary>
+            <value>The resources.</value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.IGanttTask.Progress">
+            <summary>
+            Gets or sets the progress.
+            </summary>       
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.IGanttTask.Children">
+            <summary>
+            Gets or sets the children.
+            </summary>       
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskRelationship.ID">
+            <summary>
+            Gets or sets the index of the gantt task.
+            </summary>
+            <value>The index of the gantt task.</value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskRelationship.Relationship">
+            <summary>
+            Gets or sets the gantt task relationship.
+            </summary>
+            <value>The gantt task relationship.</value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskRelationship.Item">
+            <summary>
+            Gets or sets the value for which predecessor collection is defined.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttResource.ID">
+            <summary>
+            Gets or sets the ID.
+            </summary>
+            <value>The ID.</value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttResource.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.GanttResourceCollection">
+            <summary>
+            To hold the resources in Gantt.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TaskDetail">
+            <summary>
+            Represents the class for TaskDetail.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.TaskDetail.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.Children">
+            <summary>
+            Gets or sets the child.
+            </summary>
+            <value>The child.</value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.IsExpanded">
+            <summary>
+            Gets the bool value to check whether it is expanded.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.StartDate">
+            <summary>
+            Gets or sets the start date.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.FinishDate">
+            <summary>
+            Gets or sets the finish date.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.Duration">
+            <summary>
+            Gets or sets the duration.
+            </summary>	 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.Predecessors">
+            <summary>
+            Gets or sets the predecessors.
+            </summary>	 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.Resources">
+            <summary>
+            Gets or sets the resources.
+            </summary>      
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.Progress">
+            <summary>
+            Gets or sets the progress.
+            </summary>	   
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.ID">
+            <summary>
+            Gets or sets the id for task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.Name">
+            <summary>
+            Gets or sets the name for the task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.ParentTask">
+            <summary>
+            Gets or sets the parent task.
+            </summary>	   
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.IsMilestone">
+            <summary>
+            Gets or sets a value indicating whether this instance is milestone.
+            </summary>	  
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.IsTapped">
+            <summary>
+            Gets or sets a value indicating whether the task is tapped or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.Successors">
+            <summary>
+            Gets or sets the successors.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.ActualStartDate">
+            <summary>
+            Gets or sets the actual start date.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.ActualFinishDate">
+            <summary>
+            Gets or sets the actual finish date.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.IsHeader">
+            <summary>
+            Gets or sets a value indicating whether the task is header.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskDetail.ActualProgress">
+            <summary>
+            Gets or sets the actual progress value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TaskDetail.OnPropertyChanged(System.String)">
+            <summary>
+            Called when [property changed].
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.BeginCellEdit">
+            <summary>
+            Occurs when cell edit begins.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.EndCellEdit">
+            <summary>
+            Occurs when cell edit is completed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.TaskBarResizeStart">
+            <summary>
+            Occurs when resizing starts.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.TaskBarResizeDelta">
+            <summary>
+            Occurs when resizing is performed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.TaskBarResizeCompleted">
+            <summary>
+            Occurs when resizing is completed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.TaskBarDragStart">
+            <summary>
+            Occurs when dragging starts.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.TaskBarDragDelta">
+            <summary>
+            Occurs when dragging is performed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.TaskBarDragCompleted">
+            <summary>
+            Occurs when dragging is completed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.SelectionChanging">
+            <summary>
+            Occurs when the task's selection is changing.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.SfGantt.SelectionChanged">
+            <summary>
+            Occurs when the task's selection has changed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.Toolbar">
+            <summary>
+            Gets or sets the gantt toolbar.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ShowToolbar">
+            <summary>
+            Gets or sets the value that indicate the view of the toolbar in SfGantt.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.IsChartEditing">
+            <summary>
+            Gets a value indicating whether the editing is taking place in chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ItemsSource">
+            <summary>
+            Gets or sets the source for the Gantt control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.VisibleGridColumns">
+            <summary>
+            Gets or sets the TaskAttributes that describes which columns need to be displayed in the Gantt grid.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.GridWidth">
+            <summary>
+            Gets or sets a value to control the width of the Gantt grid.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ChartWidth">
+            <summary>
+            Gets or sets a value to control the width of the Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.AllowEditing">
+            <summary>
+            Gets or sets a value that indicates whether the user can edit the task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.EnableSelection">
+            <summary>
+            Gets or sets a value to activate selection in the Gantt grid and chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.AllowSorting">
+            <summary>
+            Gets or sets a value that indicates whether the user can sort the data by clicking on its header cell of the column in Gantt grid.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.SelectedTask">
+            <summary>
+            Gets the selected data item which bound in the Gantt.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ShowToolTipOnEditing">
+            <summary>
+            Gets or sets a value that indicates whether the user can view the tooltip while editing the task in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.AllowResizingColumns">
+            <summary>
+            Gets or sets a value that indicates whether the user can adjust the column width by using the mouse.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ParentTaskBarBrush">
+            <summary>
+            Gets or sets a brush that decribes parent task bar color. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.TaskBarBrush">
+            <summary>
+            Gets or sets a brush that decribes task bar color.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.MilestoneBrush">
+            <summary>
+            Gets or sets a brush that decribes milestone color. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ParentProgressIndicatorBrush">
+            <summary>
+            Gets or sets a brush that decribes parent task's progress indicator color. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.TaskProgressIndicatorBrush">
+            <summary>
+            Gets or sets a brush that decribes task's progress indicator color. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.TimescaleSettings">
+            <summary>
+            Gets or sets the timescale settings that holds all <see cref="T:Syncfusion.UI.Xaml.Gantt.Timescale"/> properties.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.SfGantt.TimescaleSettingsProperty">
+            <summary>
+            The timescale settings property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.WeekBeginsOn">
+            <summary>
+            Gets or sets the day, on which the week get begins.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.SfGantt.WeekBeginsOnProperty">
+            <summary>
+            The week begins on property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ShowToolTipOnEditingProgress">
+            <summary>
+            Gets or sets a value that indicates whether the user can view the tooltip while editing the task's progress in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ShowToolTipOnEditingPredecessor">
+            <summary>
+            Gets or sets a value that indicates whether the user can view the tooltip while establishing relationship in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.DisplayTaskNames">
+            <summary>
+            Gets or sets the value that indicate whether the task name need to display in the Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.DisplayResourceNames">
+            <summary>
+            Gets or sets the value that indicate whether the resource names need to display in the Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.SelectedIndex">
+            <summary>
+            Gets or sets a value indicates the index of the selected task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.SelectionBackground">
+            <summary>
+            Gets or sets a brush that describes the background color of the selected task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.SelectionForeground">
+            <summary>
+            Gets or sets a brush that describes the foreground color of the selected task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ProjectResources">
+            <summary>
+            Gets or sets the resources involved in the project.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.ShowNonWorkingDays">
+            <summary>
+            Gets or sets a value that indicates whether to highlight the non working days in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.NonWorkingDays">
+            <summary>
+            Gets or sets the Days type value to be considered as non working days.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.NonWorkingDaysBackground">
+            <summary>
+            Gets or set a brush value to highlight non working days in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.TimescaleStartDate">
+            <summary>
+            Gets or sets the start date of the timescale.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.TimescaleEndDate">
+            <summary>
+            Gets or sets the end date of the timescale.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.AutoScrollOffset">
+            <summary>
+            Gets or sets the value that indicates how much pixels get scrolled while auto scrolling.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.SfGantt.AutoScrollOffsetProperty">
+            <summary>
+            The auto scroll offset backing property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SfGantt.RowHeight">
+            <summary>
+            Gets or sets a value for row height.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.OnResourceCollectionChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The resource collection property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.OnTimescaleSettingsPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The timescale settings property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.OnAutoScrollOffsetChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The auto-scroll offset property changed call back method.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.OnWeekBeginsOnPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The week begins on property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.BeginEdit(System.Object,System.String)">
+            <summary>
+            To raise the begin cell edit event.
+            </summary>
+            <param name="task">The task detail</param>
+            <param name="mappingName">The column mapping name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.EditCompleted(System.Object,System.String)">
+            <summary>
+            To raise the editing cell completed event.
+            </summary>
+            <param name="task"></param>
+            <param name="mappingName"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.GetFlatIndex(Syncfusion.UI.Xaml.Gantt.TaskDetail)">
+            <summary>
+            To get the flat index.
+            </summary>
+            <param name="taskDetail">The task detail.</param>
+            <returns>
+            <value>
+            <c>Index</c> if given task is exist.
+            <c>-1</c> otherwise.
+            </value>
+            </returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.ResourceCollection_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            The resource collection's collection changed.
+            </summary>
+            <param name="sender">The object.</param>
+            <param name="e">The notification changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.ScrollGanttTo(System.Nullable{System.DateTime},System.Nullable{System.Int32})">
+            <summary>
+            To scroll the Gantt chart horizontally to the specified date and vertically to the specificied task's index.
+            </summary>
+            <param name="date">DateTime value to scroll horizontally.</param>
+            <param name="index">Task's index value to scroll vertically.</param>
+            <returns>Boolean value, chart scrolls or not.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.Refresh">
+            <summary>
+            To refresh the gantt control
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.CalculateActualProgress(System.DateTime,System.DateTime,Syncfusion.UI.Xaml.Gantt.TaskDetail)">
+            <summary>
+            To calculate actual progress when editing in grid.
+            </summary>
+            <param name="oldStartDate"></param>
+            <param name="oldFinishDate"></param>
+            <param name="taskDetail"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.SfGantt.Dispose">
+            <summary>
+            To dispose the Gantt's instances.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ChartView">
+            <summary>
+            Represent the chart view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.ChartView.selectedItem">
+            <summary>
+            To store the selected item (for editing).
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.ChartView.timer">
+            <summary>
+            The timer to perform auto scrolling (While drag/resize the task).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.IsEditing">
+            <summary>
+            Gets a value indicating whether view is editing.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.ChartScrollViewer">
+            <summary>
+            Gets the chart's scroll viewer.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.XPosition">
+            <summary>
+            Gets or sets current pointer's X position.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.IsScrolled">
+            <summary>
+            Gets or sets the bool value that indicate whether scrolling is performed last.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.IsDragged">
+            <summary>
+            Gets or sets the bool value that indicate whether dragging is performed last.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.CanActivate">
+            <summary>
+            Gets the bool value that indicate whether chart items are interacted.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.PredecessorInfo">
+            <summary>
+            Gets or sets the predecessor info for tooltip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.TaskToolTipInfo">
+            <summary>
+            Gets or sets the task info for tooltip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.IsPredecessorDragStarted">
+            <summary>
+            Flag to indicate whether the predecessor drag started.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.ParentTaskBarBrush">
+            <summary>
+            Gets or sets a brush that decribes parent task bar color. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.TaskBarBrush">
+            <summary>
+            Gets or sets a brush that decribes task bar color. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.MilestoneBrush">
+            <summary>
+            Gets or sets a brush that decribes milestone color. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.ParentProgressIndicatorBrush">
+            <summary>
+            Gets or sets a brush that decribes parent task's progress indicator color. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.TaskProgressIndicatorBrush">
+            <summary>
+            Gets or sets a brush that decribes task's progress indicator color. 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.OnVisualChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The visual changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.PredecessorPanel">
+            <summary>
+            Gets or sets a value for predecessor panel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartView.AutoScrollOffset">
+            <summary>
+            Gets or sets the auto scroll offset.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.OnScrollCompleted">
+            <summary>
+            The works to be done after scrolling completed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.GetScrollOffsetArea">
+            <summary>
+            To get the pointer in which scroll offset area.
+            </summary>
+            <returns>The scroll offset area.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.AutoScrollLeft">
+            <summary>
+            Scroll the view automatically to left (While drag/resize the task).
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.AutoScrollRight">
+            <summary>
+            Scroll the view automatically to right (While drag/resize the task).
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.AutoScroll(System.Double)">
+            <summary>
+            To perform auto scroll.
+            </summary>
+            <param name="scrollOffset">The offset to auto scroll.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.ResetTimer">
+            <summary>
+            To set or restart the timer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.OnTimeOut(System.Object,System.Object)">
+            <summary>
+            The timer tick event.
+            </summary>
+            <param name="sender">The object.</param>
+            <param name="e">The object</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.DisposeTimer">
+            <summary>
+            To dispose the timer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.AddThumbs">
+            <summary>
+            To add the thumbs for selected item, after chart view scrolled.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.ResetToolTipTimer">
+            <summary>
+            To set or restart the timer for predecessor tooltip.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartView.Dispose">
+            <summary>
+            To dispose the view instances.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.GanttChart">
+            <summary>
+            Represents a control that can display the progress of project in graphical notation.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.LinkStateEnabled">
+            <summary>
+            Gets or sets a value to enable linked state.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.AllowEditing">
+            <summary>
+            Gets or sets a value that indicates whether the user can edit the task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.ShowToolTipOnEditing">
+            <summary>
+            Gets or sets a value that indicates whether the user can view the tooltip while editing the task in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.ShowToolTipOnEditingProgress">
+            <summary>
+            Gets or sets a value that indicates whether the user can view the tooltip while editing the task's progress in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.ShowToolTipOnEditingPredecessor">
+            <summary>
+            Gets or sets a value that indicates whether the user can view the tooltip while establishing relationship in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.DisplayTaskNames">
+            <summary>
+            Gets or sets the value that indicate whether the task name need to display in the Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.DisplayResourceNames">
+            <summary>
+            Gets or sets the value that indicate whether the resource names need to display in the Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.SelectedIndex">
+            <summary>
+            Gets or sets a value indicates the index of the selected task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.SelectedTask">
+            <summary>
+            Gets the selected data item which bound in the Gantt.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.SelectionBackground">
+            <summary>
+            Gets or sets a brush that describes the background color of the selected task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.SelectionForeground">
+            <summary>
+            Gets or sets a brush that describes the foreground color of the selected task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.EnableSelection">
+            <summary>
+            Gets or sets a value to activate selection in the Gantt grid and chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.WeekBeginsOn">
+            <summary>
+            Gets or sets the day, on which the week get begins.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttChart.WeekBeginsOnProperty">
+            <summary>
+            The week begins on property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.ShowNonWorkingDays">
+            <summary>
+            Gets or sets a value that indicates whether to highlight the non working days in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.NonWorkingDays">
+            <summary>
+            Gets or sets the Days type value to be considered as non working days.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.NonWorkingDaysBackground">
+            <summary>
+            Gets or set a brush value to highlight non working days in Gantt chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.ProjectResources">
+            <summary>
+            Gets or sets the resources involved in the project.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.TimescaleStartDate">
+            <summary>
+            Gets or sets the start date of the timescale.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttChart.TimescaleStartDateProperty">
+            <summary>
+            The timescale start date property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.TimescaleEndDate">
+            <summary>
+            Gets or sets the end date of the timescale.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttChart.TimescaleEndDateProperty">
+            <summary>
+            The timescale end date property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttChart.AutoScrollOffset">
+            <summary>
+            Gets or sets the value that indicates how much pixels get scrolled while auto scrolling.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttChart.AutoScrollOffsetProperty">
+            <summary>
+            The auto scroll offset backing property.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.OnAllowEditingChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The allow editing property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.OnRangeChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The timescale start or end date property changed.
+            </summary>
+            <param name="sender">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.OnWeekBeginsOnPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The week begins on property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.OnResourceCollectionChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The resource collection property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.OnAutoScrollChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The auto scroll offset property changed call back method.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.RefreshResourceLabels">
+            <summary>
+            To refresh the resources label content.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.ChartScrollViewer_Loaded(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            To synchronize scrolling in the WindowsPhone.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.BasePanel_PointerWheelChanged(System.Object,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Base panel's pointer wheel changed event.
+            </summary>
+            <param name="sender">The object.</param>
+            <param name="e">The pointer router event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.ResetTimer">
+            <summary>
+            To set or restart the timer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.OnTimeOut(System.Object,System.Object)">
+            <summary>
+            The timer tick event.
+            </summary>
+            <param name="sender">The object.</param>
+            <param name="e">The object</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.RefreshArea">
+            <summary>
+            To refresh the chart area.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.ScheduleRefreshArea">
+            <summary>
+            To refresh the chart area asynchronously.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.ScheduleRefreshView">
+            <summary>
+            Refreshes the view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttChart.Dispose">
+            <summary>
+            To dispose the chart instances.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ChartToolTip">
+            <summary>
+            Represent the chart tooltip.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.AdorningCanvas">
+            <summary>
+            Represents a bottom adorner layer.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ConnectorPanel">
+            <summary>
+            Represent a panel that display relationship between two tasks.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ConnectorPanel.ChartView">
+            <summary>
+            Gets or sets the chart view.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ConnectorPanel.ConnectorLines">
+            <summary>
+            Gets or sets the line collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ConnectorPanel.ConnectorArrows">
+            <summary>
+            Gets or sets the arrow collection.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.GanttAdorningCanvas">
+            <summary>
+            Represents the class for adorning canvas in gantt control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttAdorningCanvas.GanttControl">
+            <summary>
+            Gets or sets a value for gantt control.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttAdorningCanvas.MeasureOverride(Windows.Foundation.Size)">
+            <summary>
+            Measures the Children in the panel.
+            </summary>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttAdorningCanvas.ArrangeOverride(Windows.Foundation.Size)">
+            <summary>
+            Arranges the Children in the panel.
+            </summary>
+            <param name="finalSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.GanttDockPanel">
+            <summary>
+            Arranges child elements around the edges of the panel.  Optionally, 
+            last added child element can occupy the remaining space.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.ignorePropertyChange">
+            <summary>
+            A value indicating whether a dependency property change handler
+            should ignore the next change notification.  This is used to reset
+            the value of properties without performing any of the actions in
+            their change handlers.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.rootElement">
+            <summary>
+            Initializes m_rootElement
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.controlsThickness">
+            <summary>
+            Initializes m_controlsThickness
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.resultDockRect">
+            <summary>
+            Initializes m_resultDockRect
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.RootElement">
+            <summary>
+            Gets or sets the root element. This is a dependency property.
+            </summary>
+            <value>The root element.</value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.ElementMargin">
+            <summary>
+            Gets or sets the element margin. This is a dependency property.
+            </summary>
+            <value>The element margin.</value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.Host">
+            <summary>
+            Gets or sets the sync area.
+            </summary>
+            <value>The sync area.</value>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.GetDock(Windows.UI.Xaml.UIElement)">
+            <summary>
+            Gets an element's dock position in the area.
+            </summary>
+            <param name="element">any UIElement</param>
+            <returns>returns dock position of UIElement.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.SetDock(Windows.UI.Xaml.UIElement,Syncfusion.UI.Xaml.Gantt.DockPosition)">
+            <summary>
+            Sets an element's dock position in the area.
+            </summary>
+            <param name="element"></param>
+            <param name="dock"></param>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.DockProperty">
+            <summary>
+             The DependencyProperty for <see cref="!:Dock"/> property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.HostProperty">
+            <summary>
+             The DependencyProperty for <see cref="P:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.Host"/> property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.ElementMarginProperty">
+            <summary>
+            The DependencyProperty for <see cref="P:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.ElementMargin"/> property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.RootElementProperty">
+            <summary>
+            The DependencyProperty for <see cref="P:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.RootElement"/> property.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.OnRootElementChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when root element is changed.
+            </summary>
+            <param name="dpObj">The dependency object.</param>
+            <param name="e">The <see cref="T:Windows.UI.Xaml.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.ArrangeOverride(Windows.Foundation.Size)">
+            <summary>
+            When overridden in a derived class, positions child elements and determines a size for a <see cref="T:System.Windows.FrameworkElement"></see> derived class.
+            </summary>
+            <param name="finalSize">The final area within the parent that this element should use to arrange itself and its children.</param>
+            <returns>The actual size used.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.MeasureOverride(Windows.Foundation.Size)">
+            <summary>
+            Provides the behavior for the Measure pass of Silverlight layout. Classes can override this method to define their own Measure pass behavior.
+            </summary>
+            <returns>
+            The size that this object determines it needs during layout, based on its calculations of the allocated sizes for child objects; or based on other considerations, such as a fixed container size.
+            </returns>
+            <param name="availableSize"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.OnDockPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            DockProperty property changed handler.
+            </summary>
+            <param name="d">UIElement that changed its Dock.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttDockPanel.EnsureRectIsInside(Windows.Foundation.Rect,Windows.Foundation.Rect)">
+            <summary>
+            Ensures the rectangle is inside specified bounds.
+            </summary>
+            <param name="bounds">The bounds.</param>
+            <param name="rect">The rectangle.</param>
+            <returns>Returns the Rectangle</returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TimescaleCell">
+            <summary>
+            The timescale cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleCell.border">
+            <summary>
+            The border.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleCell.timescaleTier">
+            <summary>
+            The backing field for timescale tier.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleCell.Value">
+            <summary>
+            Represents the value of timescale label.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleCell.LabelPresenter">
+            <summary>
+            Gets or sets the text block.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleCell.TimescaleTier">
+            <summary>
+            Gets or sets the timescale tier
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleCell.MeasureOverride(Windows.Foundation.Size)">
+            <summary>
+            The measure override.
+            </summary>
+            <param name="availableSize">The available size.</param>
+            <returns>The <see cref="T:Windows.Foundation.Size"/>.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleCell.ArrangeOverride(Windows.Foundation.Size)">
+            <summary>
+            The arrange override.
+            </summary>
+            <param name="finalSize">The final size.</param>
+            <returns>The <see cref="T:Windows.Foundation.Size"/>.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleCell.GenerateChild">
+            <summary>
+            To generate the childs of timescale cell.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ToolbarPanel">
+            <summary>
+            Represents the tool bar panel.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.Timescale">
+            <summary>
+            The timescale.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Timescale.TimescaleSettingsProperty">
+            <summary>
+            The timescale settings property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Timescale.StartDateProperty">
+            <summary>
+            The start date property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Timescale.EndDateProperty">
+            <summary>
+            The end date property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Timescale.computedSize">
+            <summary>
+            The timescale computed size.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Timescale.dayWidth">
+            <summary>
+            The backing field for day width.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Timescale.nonWorkingDaysRecycler">
+            <summary>
+            The backing field for non working day recycler.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Timescale.actualRange">
+            <summary>
+            The backing field for the actual range.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.UI.Xaml.Gantt.Timescale"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.TimescaleSettings">
+            <summary>
+            Gets or sets the timescale settings that holds all <see cref="T:Syncfusion.UI.Xaml.Gantt.Timescale"/> properties.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.StartDate">
+            <summary>
+            Gets or sets the timescale start date.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.EndDate">
+            <summary>
+            Gets or sets the timescale end date.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.ComputedSize">
+            <summary>
+            Gets or sets the timescale computed size.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.AvailableSize">
+            <summary>
+            The timescale available size.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.ActualRange">
+            <summary>
+            Gets or sets the timescale start and end date with padding.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.VisibleRange">
+            <summary>
+            Gets or sets the timescale visible range.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.Chart">
+            <summary>
+            Gets or sets the gantt chart instance.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.DayWidth">
+            <summary>
+            Gets or sets the day cell width.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.TimescaleBasePanel">
+            <summary>
+            Gets or sets the timescale base panel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Timescale.NonWorkingDaysRecycler">
+            <summary>
+            Gets or sets the non working days recycler.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.ComputeSize(Windows.Foundation.Size)">
+            <summary>
+            The compute size.
+            </summary>
+            <param name="availableSize">The available size.</param>
+            <returns>The computed size.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.Arrange(Windows.Foundation.Size)">
+            <summary>
+            The arrange.
+            </summary>
+            <param name="availableSize">The available size.</param>
+            <returns>The <see cref="T:Windows.Foundation.Size"/>.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.GetPosition(System.DateTime)">
+            <summary>
+            To find the screen position for the given date.
+            </summary>
+            <param name="targetTime">The target time.</param>
+            <returns>The position of target time.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.GetActualDate(System.DateTime,System.Double)">
+            <summary>
+            To get the actual date.
+            </summary>
+            <param name="date">Current date.</param>
+            <param name="change">Current change.</param>
+            <returns>The actual date.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.UpdateTimescale">
+            <summary>
+            To update timescale.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.GenerateTimescaleCells">
+            <summary>
+            To generate timescale tier cells.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.Validate">
+            <summary>
+            To validate interval and interval type.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.SetActualIntervalType(Syncfusion.UI.Xaml.Gantt.Range{System.DateTime})">
+            <summary>
+            To set actual interval type.
+            </summary>
+            <param name="range">Range of the timescale</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.GenerateTiers">
+            <summary>
+            To add the tier panel to timescale base panel.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.Refresh(Syncfusion.UI.Xaml.Gantt.Tier)">
+            <summary>
+            To update timescale or change scroll viewer view based on tier position and scroll viewer horizontal offset.
+            </summary>
+            <param name="position">The timescale tier position.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.OnApplyTemplate">
+            <summary>
+            The on apply template.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.OnRangeChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The range changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.OnTimescaleSettingsPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The timescale settings property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.ValidateIntervalType(System.Collections.Generic.List{Syncfusion.UI.Xaml.Gantt.TimescaleTier})">
+            <summary>
+            To validate interval type.
+            </summary>
+            <param name="tiers">Sorted tier collection.</param>
+            <exception cref="T:System.Exception">If top tier interval type is less than the bottom tier's interval type.</exception>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Timescale.ValidateInterval(System.Collections.Generic.List{Syncfusion.UI.Xaml.Gantt.TimescaleTier})">
+            <summary>
+            To validate interval.
+            </summary>
+            <param name="tiers">Sorted tier collection.</param>
+            <exception cref="T:System.Exception">If top tier's interval is less than the bottom tier's interval.</exception>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ChartBackgroundPanel">
+            <summary>
+            Represents a chart background panel.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ChartBasePanel">
+            <summary>
+            Represent chart base panel.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel">
+            <summary>
+            Represents a panel that arranges the items in the row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.taskBounds">
+            <summary>
+            Bounds for task bar to enable the editing thumbs.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.positionOffset">
+            <summary>
+            To position thumb inside the path
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.pointerDeviceType">
+            <summary>
+            To get active pointer device type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.taskPathGeometry">
+            <summary>
+            To define geometry for task and milestone path.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.milestonePathGeometry">
+            <summary>
+            To define geometry for task and milestone path.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.progressPathGeometry">
+            <summary>
+            To define geometry for task and milestone path.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.PointerDeviceType">
+            <summary>
+            Gets or sets the active pointer device type.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.TaskBar">
+            <summary>
+            Gets or sets the task path
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.AllowEditing">
+            <summary>
+            Gets or sets a value that indicates whether the user can edit the task.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.Item">
+            <summary>
+            Gets or sets the item rendered in the panel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.TaskBarDragCancel">
+            <summary>
+            Gets the task drag is cancelled.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.ExpandOrCollapse">
+            <summary>
+            To expand or collapse the child tasks. while tap on the header task.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.ClearHighlight">
+            <summary>
+            Method called to clear highlighted task.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.ApplyEditOptionStyles(Windows.Devices.Input.PointerDeviceType)">
+            <summary>
+            To apply the style for thumbs and ellipses based on the pointer device type.
+            </summary>
+            <param name="pointerDeviceType">Active pointer device type.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.DragLeftThumb(System.Double)">
+            <summary>
+            To drag the left thumb.
+            </summary>
+            <param name="change">The change.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.DragRightThumb(System.Double)">
+            <summary>
+            To drag the right thumb.
+            </summary>
+            <param name="change">The change.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.RemoveEllipse">
+            <summary>
+            Method called to remove ellipse from panel.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.DragOrResizeTask(System.Double)">
+            <summary>
+            To resize or drag the task.
+            </summary>
+            <param name="offset">The offset.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartItemsPanel.Dispose">
+            <summary>
+            To dispose the chart items panel's instances.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TimescaleBasePanel">
+            <summary>
+            The timescale base panel.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleBasePanel.MeasureElements(Windows.Foundation.Size)">
+            <summary>
+            The measure elements.
+            </summary>
+            <param name="availableSize">The available size.</param>
+            <returns>The computed size.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleBasePanel.Arrange(Windows.Foundation.Size)">
+            <summary>
+            The arrange.
+            </summary>
+            <param name="finalSize">The final size.</param>
+            <returns>The <see cref="T:Windows.Foundation.Size"/>.</returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TimescaleTierPanel">
+            <summary>
+            The timescale tier panel.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTierPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.UI.Xaml.Gantt.TimescaleTierPanel"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTierPanel.TimescaleTier">
+            <summary>
+            Gets or sets the timescale tier.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTierPanel.ComputedSize">
+            <summary>
+            Gets or sets the computed size.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTierPanel.TimescaleCellsRecycler">
+            <summary>
+            Gets or sets the timescale cells recycler.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTierPanel.MeasureElements(Windows.Foundation.Size)">
+            <summary>
+            The measure elements.
+            </summary>
+            <param name="availableSize">The available size.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTierPanel.Arrange(Windows.Foundation.Size)">
+            <summary>
+            The arrange.
+            </summary>
+            <param name="finalSize">The final size.</param>
+            <returns>The <see cref="T:Windows.Foundation.Size"/>.</returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TimescaleTier">
+            <summary>
+            The timescale tier.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.IntervalProperty">
+            <summary>
+            The interval property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.IntervalTypeProperty">
+            <summary>
+            The interval type property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.LabelTemplateProperty">
+            <summary>
+            Dependency property of LabelTemplate.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.LabelAlignmentProperty">
+            <summary>
+            The text alignment property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.YearsLabelFormatProperty">
+            <summary>
+            The Years label format property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.QuarterLabelFormatProperty">
+            <summary>
+            The Quarter label format property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.MonthsLabelFormatProperty">
+            <summary>
+            The Months label format property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.WeeksLabelFormatProperty">
+            <summary>
+            The Weeks label format property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.DaysLabelFormatProperty">
+            <summary>
+            The Days label format property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.HoursLabelFormatProperty">
+            <summary>
+            The Hours label format property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.MinutesLabelFormatProperty">
+            <summary>
+            The Minutes label format property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.actualIntervalType">
+            <summary>
+            Backing field for actual interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.inbuiltYearString">
+            <summary>
+            The inbuild custom format strings for Years interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.inbuiltQuarterString">
+            <summary>
+            The inbuild custom format strings for Quarter interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.inbuiltMonthString">
+            <summary>
+            The inbuild custom format strings for Months interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.inbuiltWeekString">
+            <summary>
+            The inbuild custom format strings for Weeks interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleTier.inbuiltDayString">
+            <summary>
+            The inbuild custom format strings for Days interval type.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.UI.Xaml.Gantt.TimescaleTier"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.Interval">
+            <summary>
+            Gets or sets a value that determines the interval between the timescale tier cells.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.IntervalType">
+            <summary>
+            Gets or sets value that defines the type of interval to be displayed in timescale tier.
+            If this property is set as Auto, interval type will be calculated automatically.
+            </summary>
+            <remarks>
+            This property hold the values ranges from Year, Months to Minutes.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.LabelTemplate">
+            <summary>
+            Gets or sets the template for customizing timescale cell's label.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.ActualIntervalType">
+            <summary>
+            Gets value that defines the type of interval to be displayed in timescale tier.
+            </summary>
+            <remarks>
+            This property hold the values ranges from Year, Months to Minutes.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.LabelAlignment">
+            <summary>
+            Gets or sets the text alignment for the label appearing in timescale tier.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.YearsLabelFormat">
+            <summary>
+            Gets or sets the label format for Years IntervalType.
+            <c>MMM dd,'yy</c> represents Jan 25,'09
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.QuarterLabelFormat">
+            <summary>
+            Gets or sets the label format for Quarter IntervalType.
+            <c>Quarter</c> represents 1st Quarter, 2nd Quarter,...
+            <c>Q</c> represents Q1, Q2,...
+            <c>Q'yy</c> represents Q1'09, Q2'09,...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.MonthsLabelFormat">
+            <summary>
+            Gets or sets the label format for Months IntervalType.
+            <c>MMM:1</c> represents J, F,...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.WeeksLabelFormat">
+            <summary>
+            Gets or sets the label format for Weeks IntervalType.
+            <c>ddd MMM dd,'yy</c> represents Sun Jan 25,'09,...
+            <c>ddd MMMM dd,'yy</c> represents Sun January 25,'09,...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.DaysLabelFormat">
+            <summary>
+            Gets or sets the label format for Days IntervalType.
+            <c>ddd:1</c> represents S, M,...
+            <c>ddd:2</c> represents Su, Mo,...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.HoursLabelFormat">
+            <summary>
+            Gets or sets the label format for Hours IntervalType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.MinutesLabelFormat">
+            <summary>
+            Gets or sets the label format for Minutes IntervalType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.ActualYearsLabelFormat">
+            <summary>
+            Gets or sets the actual label format for Years IntervalType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.ActualQuarterLabelFormat">
+            <summary>
+            Gets or sets the actual label format for Quarters IntervalType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.ActualMonthsLabelFormat">
+            <summary>
+            Gets or sets the actual label format for Months IntervalType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.ActualWeeksLabelFormat">
+            <summary>
+            Gets or sets the actual label format for Weeks IntervalType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.ActualDaysLabelFormat">
+            <summary>
+            Gets or sets the actual label format for Days IntervalType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.ActualHoursLabelFormat">
+            <summary>
+            Gets or sets the actual label format for Hours IntervalType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.ActualMinutesLabelFormat">
+            <summary>
+            Gets or sets the actual label format for Minutes IntervalType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.Tier">
+            <summary>
+            Gets or sets a value that determines current instance is which tier.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.Timescale">
+            <summary>
+            Gets or sets the timescale.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.TierPanel">
+            <summary>
+            Gets or sets the tier panel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleTier.MaxCellWidth">
+            <summary>
+            Gets or sets the max cell width. It is calculated based on content size.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.GenerateTimescaleCells(Syncfusion.UI.Xaml.Gantt.Range{System.DateTime},Windows.Foundation.Size)">
+            <summary>
+            The generate timescale cells.
+            </summary>
+            <param name="visibleRange">The visible range.</param>
+            <param name="availableSize">The timescale available size.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.SetBorderThickness">
+            <summary>
+            To set the border thickness based on tier.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.GetActualRangeWidth">
+            <summary>
+            To calculate the width of the actual range.
+            </summary>
+            <returns>The width of the actual range.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnLabelAlignmentChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This method occurs when LabelAlignment property changed
+            </summary>
+            <param name="d">Timescale tier object</param>
+            <param name="e">event args of dependency property changed</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnLabelTemplateChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This method occurs when LabelTemplate property changed.
+            </summary>
+            <param name="d">Timescale tier object</param>
+            <param name="e">event args of dependency property changed</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnIntervalPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The interval property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnIntervalTypePropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The interval type property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnYearsLabelFormatChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            On Years label format changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnQuarterLabelFormatChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            On Quarters label format changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnMonthsLabelFormatChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            On Months label format changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnWeeksLabelFormatChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            On Weeks label format changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnDaysLabelFormatChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            On Days label format changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnHoursLabelFormatChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            On Hours label format changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnMinutesLabelFormatChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            On Minutes label format changed.
+            </summary>
+            <param name="d">The dependency property.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.OnLabelFormatChanged">
+            <summary>
+            Label format changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.AddCellsContent(Syncfusion.UI.Xaml.Gantt.Range{System.DateTime},Windows.Foundation.Size)">
+            <summary>
+            The add cells content.
+            </summary>
+            <param name="visibleRange">The visible range.</param>
+            <param name="availableSize">The timescale available size.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleTier.SetFirstCellOffset(Syncfusion.UI.Xaml.Gantt.TimescaleCell)">
+            <summary>
+            To set the timescale first cell left offset.
+            </summary>
+            <param name="cell">The current cell.</param>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TimescaleLabel">
+            <summary>
+            Represents the timescale label element
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleLabel.ActualContent">
+            <summary>
+            Actual datetime value of the current timescale cell.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleLabel.Content">
+            <summary>
+            Formatted text value from current timescale cell.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleLabel.IntervalType">
+            <summary>
+            Represents actual interval type of the timescale tier.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleLabel.LabelAlignment">
+            <summary>
+            Represents LabelAlignment of the timescale tier.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TimescaleSettings">
+            <summary>
+            Defines all <see cref="P:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.Timescale"/> members.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.TopTierProperty">
+            <summary>
+            The top tier property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.BottomTierProperty">
+            <summary>
+            The bottom tier property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.CellSizeProperty">
+            <summary>
+            The cell size property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.timescale">
+            <summary>
+            The backing field for current timescale instance.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.UI.Xaml.Gantt.TimescaleSettings"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.TopTier">
+            <summary>
+            Gets or sets the top tier that holds all <see cref="T:Syncfusion.UI.Xaml.Gantt.TimescaleTier"/> properties.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.BottomTier">
+            <summary>
+            Gets or sets the bottom tier that holds all <see cref="T:Syncfusion.UI.Xaml.Gantt.TimescaleTier"/> properties.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.CellSize">
+            <summary>
+            Gets or sets the timescale cell size.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.TierCollection">
+            <summary>
+            Gets or sets the timescale tier collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.Timescale">
+            <summary>
+            Gets or sets current timescale instance.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.TierCollection_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            The tier collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">Notify collection changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.OnTopTierPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The top tier property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.OnBottomTierPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The bottom tier property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.OnCellSizePropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            The cell size property changed.
+            </summary>
+            <param name="d">The dependency object.</param>
+            <param name="e">The dependency property changed event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.UpdateTierCollection(Syncfusion.UI.Xaml.Gantt.TimescaleTier,Syncfusion.UI.Xaml.Gantt.TimescaleTier)">
+            <summary>
+            To update the timescale tier collection.
+            </summary>
+            <param name="oldValue">Timescale tier old value.</param>
+            <param name="newValue">Timescale tier new value.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.OnTimescaleChanged">
+            <summary>
+            The on timescale changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleSettings.OnTierChanged(Syncfusion.UI.Xaml.Gantt.TimescaleTier,Syncfusion.UI.Xaml.Gantt.TimescaleTier,Syncfusion.UI.Xaml.Gantt.Tier)">
+            <summary>
+            On tier changed.
+            </summary>
+            <param name="oldTier">timescale tier old value.</param>
+            <param name="newTier">timescale tier new value.</param>
+            <param name="position">tier position.</param>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.GanttToolbar">
+            <summary>
+            Represents the class for toolbar.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GanttToolbar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.UI.Xaml.Gantt.GanttToolbar"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttToolbar.GanttControl">
+            <summary>
+            Gets or sets the gantt control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttToolbar.Icons">
+            <summary>
+            Gets or sets the icons to be added in toolbar.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttToolbar.SelectedIcon">
+            <summary>
+            Gets or sets the icon selected in ToolBar.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.GanttToolbar.EnableEditIcon">
+            <summary>
+            Gets or sets a value indicating whether to enable edit icon.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ToolbarItem">
+            <summary>
+            Represents a class for toolbar item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ToolbarItem.Toolbar">
+            <summary>
+            Gets or sets the value of the gantt control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ToolbarItem.Icon">
+            <summary>
+            Gets or sets the icon type of the item.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ToolbarItem.OnPointerMoved(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Method is called when pointer is moved.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ToolbarItem.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+             Method is called when the pointer is exited.
+             </summary>
+             <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ToolbarItem.OnPointerReleased(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Method is called when pointer is released.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ChartUtils">
+            <summary>
+            Represents the class for chart utils.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartUtils.IsTaskPresent(Syncfusion.UI.Xaml.Gantt.TaskDetail,System.Collections.Generic.IList{Syncfusion.UI.Xaml.Gantt.TaskRelationship})">
+            <summary>
+            To check whether the item is present in successors.
+            </summary>
+            <param name="task"></param>
+            <param name="successors"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartUtils.IsPredecessorExist(Syncfusion.UI.Xaml.Gantt.TaskRelationship,System.Collections.Generic.IList{Syncfusion.UI.Xaml.Gantt.TaskRelationship})">
+            <summary>
+            To check whether the relation is exist in the predecessors collection.
+            </summary>
+            <param name="relationship"></param>
+            <param name="predecessors"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartUtils.ValidateRelationsOnEditing(Syncfusion.UI.Xaml.Gantt.TaskDetail,Syncfusion.UI.Xaml.Gantt.TaskDetail,System.String,System.Collections.Generic.IList{Syncfusion.UI.Xaml.Gantt.TaskRelationship},System.Collections.Generic.IList{Syncfusion.UI.Xaml.Gantt.TaskRelationship})">
+            <summary>
+            To validate relation when editing is completed.
+            </summary>
+            <param name="startTask"></param>
+            <param name="endTask"></param>
+            <param name="predecessorId"></param>
+            <param name="startTaskPredecessors"></param>
+            <param name="endTaskPredecessors"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartUtils.CalculateActualProgress(System.Double,System.Double,System.Double)">
+            <summary>
+            To calculate the actual progress.
+            </summary>
+            <param name="oldWidth">Task's old width.</param>
+            <param name="progress">The progress value.</param>
+            <param name="newWidth">Task's new width.</param>
+            <returns>The actual progress.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartUtils.GetPointerDirection(System.Double)">
+            <summary>
+            To find the pointer moving direction.
+            </summary>
+            <param name="change">The change happened while moving mouse.</param>
+            <returns>The pointer moving direction.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartUtils.GetActualOffset(System.Double,System.Double,System.Double)">
+            <summary>
+            To get the actual offset.
+            </summary>
+            <param name="oldWidth">The old width.</param>
+            <param name="newWidth">The new width.</param>
+            <param name="offset">The offset.</param>
+            <returns>The actual offset.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartUtils.UpdateActualRecords(System.Collections.ObjectModel.ObservableCollection{Syncfusion.UI.Xaml.Gantt.TaskDetail},Syncfusion.UI.Xaml.Gantt.IconType,Syncfusion.UI.Xaml.Gantt.TaskDetail,Syncfusion.UI.Xaml.Gantt.TaskDetail)">
+            <summary>
+            To update the itemssource when task is added or removed.
+            </summary>
+            <param name="taskCollection"></param>
+            <param name="type"></param>
+            <param name="newTask"></param>
+            <param name="selectedTask"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartUtils.CalculatePosition(Syncfusion.UI.Xaml.Gantt.TaskDetail,Syncfusion.UI.Xaml.Gantt.DataManager,System.Double)">
+            <summary>
+            To calculate the position of the task.
+            </summary>
+            <param name="task"></param>
+            <param name="dataManager"></param>
+            <param name="rowHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.ChartUtils.CheckPartition(Windows.Foundation.Point,Windows.UI.Xaml.Shapes.Path)">
+            <summary>
+            To check whether the point is in left or right position in path.
+            </summary>
+            <param name="currentPoint"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.Dictionaries">
+            <summary>
+            Represent the class for dictionaries.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Relationship.FinishToFinish">
+            <summary>
+            Represent Finish - to - Finish relation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Relationship.FinishToStart">
+            <summary>
+            Represent Finish - to - Start relation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Relationship.StartToFinish">
+            <summary>
+            Represent Start - to - Finish relation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Relationship.StartToStart">
+            <summary>
+            Represent Start - to - Start relation.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TaskAttributes">
+            <summary>
+            Represents the task attributes for grid columns.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.Update">
+            <summary>
+            Represents the area to update in the gantt control.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.IntervalType">
+            <summary>
+            The timescale tier interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.IntervalType.Auto">
+            <summary>
+            Represent auto interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.IntervalType.Years">
+            <summary>
+            Represent years interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.IntervalType.Quarter">
+            <summary>
+            Represent quarter interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.IntervalType.Months">
+            <summary>
+            Represent months interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.IntervalType.Weeks">
+            <summary>
+            Represent weeks interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.IntervalType.Days">
+            <summary>
+            Represent days interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.IntervalType.Hours">
+            <summary>
+            Represent hours interval type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.IntervalType.Minutes">
+            <summary>
+            Represent minutes interval type.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.Tier">
+            <summary>
+            The timescale tier.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Tier.Top">
+            <summary>
+            Represent top tier.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.Tier.Bottom">
+            <summary>
+            Represent bottom tier.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.YearFormat">
+            <summary>
+            Years label formats.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.YearFormat.Default">
+            <summary>
+            Represents default label format.
+            Represents 2009,2010,.. for top tier.
+            Represents 09,10,... for bottom tier.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.YearFormat.Custom">
+            <summary>
+            Represents custom label format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.YearFormat.yyyy">
+            <summary>
+            Represent 2009, 2010,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.YearFormat.yy">
+            <summary>
+            Represents 09, 10,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.YearFormat.MMMMddyyyy">
+            <summary>
+            Represents January 1, 2009,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.YearFormat.MMMddCmaPuyy">
+            <summary>
+            Represents Jan 25,'09,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.YearFormat.MMSlashddSlashyy">
+            <summary>
+            Represents 1/25/09,...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.QuarterFormat">
+            <summary>
+            Quarters label formats.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.QuarterFormat.Default">
+            <summary>
+            Represents default label format.
+            Represents 1st Quarter, 2nd Quarter,... for top tier.
+            Represents Q1, Q2,... for bottom tier.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.QuarterFormat.Custom">
+            <summary>
+            Represents custom label format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.QuarterFormat.NthQuarter">
+            <summary>
+            Represents 1st Quarter, 2nd Quarter,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.QuarterFormat.Q1">
+            <summary>
+            Represents Q1, Q2,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.QuarterFormat.Q1Puyy">
+            <summary>
+            Represents Q1'09, Q2'09,...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.MonthFormat">
+            <summary>
+            Months label formats.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.MonthFormat.Default">
+            <summary>
+            Represents default label format.
+            Represents January, February,... for top tier.
+            Represents Jan, Feb,... for bottom tier.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.MonthFormat.Custom">
+            <summary>
+            Represents custom label format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.MonthFormat.MMMM">
+            <summary>
+            Represents January, February,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.MonthFormat.MMM">
+            <summary>
+            Represents Jan, Feb,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.MonthFormat.MMMOf1">
+            <summary>
+            Represents J, F,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.MonthFormat.MMSlashyy">
+            <summary>
+            Represents 1/09, 2/09,...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.WeekFormat">
+            <summary>
+            Weeks label formats.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.WeekFormat.Default">
+            <summary>
+            Represents default label format.
+            Represents Jan 25, 2009,... for top tier.
+            Represents 1/1, 1/8,... for bottom tier.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.WeekFormat.Custom">
+            <summary>
+            Represents custom label format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.WeekFormat.dddMMSlashddSlashyy">
+            <summary>
+            Represents Sun 1/25/09,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.WeekFormat.dddMMMddCmaPuyy">
+            <summary>
+            Represents Sun Jan 25,'09,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.WeekFormat.dddMMMMMddCmaPuyy">
+            <summary>
+            Represents Sun January 25,'09,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.WeekFormat.dddMMMdd">
+            <summary>
+            Represents Sun Jan 25,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.WeekFormat.dddMMMMdd">
+            <summary>
+            Represents Sun January 25,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.WeekFormat.MMMddcmayyyy">
+            <summary>
+            Represents Jan 25, 2009,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.WeekFormat.MMSlashdd">
+            <summary>
+            Represents 1/1, 1/8,...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.DayFormat">
+            <summary>
+            Days label formats.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DayFormat.Default">
+            <summary>
+            Represents default label format.
+            Represents Sun 1/25,... for top tier.
+            Represents 1/1, 1/8,... for bottom tier.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DayFormat.Custom">
+            <summary>
+            Represents custom label format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DayFormat.dddd">
+            <summary>
+            Represents Sunday, Monday,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DayFormat.ddd">
+            <summary>
+            Represents Sun, Mon,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DayFormat.dddOf2">
+            <summary>
+            Represents Su, Mo,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DayFormat.dddOf1">
+            <summary>
+            Represents S, M,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DayFormat.dddMMSlashdd">
+            <summary>
+            Represents Sun 1/25,...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.HourFormat">
+            <summary>
+            Hours label formats.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.HourFormat.Default">
+            <summary>
+            Represents default label format.
+            Represents 11.00 AM,... for top tier.
+            Represents 00, 01,... 23 for bottom tier.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.HourFormat.Custom">
+            <summary>
+            Represents custom label format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.HourFormat.hhDotmmtt">
+            <summary>
+            Represents 11.00 AM,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.HourFormat.HHDotmm">
+            <summary>
+            Represents 00.00, 01.00,... 23.00
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.HourFormat.hhtt">
+            <summary>
+            Represents 11 AM,...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.HourFormat.HH">
+            <summary>
+            Represents 00, 01,... 23
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.MinuteFormat">
+            <summary>
+            Minutes label formats.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.MinuteFormat.mm">
+            <summary>
+            Represents 0, 1, 2, 3,... 59
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.MinuteFormat.Custom">
+            <summary>
+            Represents custom label format.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.Days">
+            <summary>
+            Flagged enum to represent week days.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.IconType">
+            <summary>
+            Represents the type of icon in toolbar.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.DockPosition">
+            <summary>
+            Represents Dockpanel position.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DockPosition.Left">
+            <summary>
+            Docks element at the left side of panel.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DockPosition.Top">
+            <summary>
+            Docks element at the top side of panel.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DockPosition.Right">
+            <summary>
+            Docks element at the right side of panel.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DockPosition.Bottom">
+            <summary>
+            Docks element at the bottom side of panel.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Gantt.DockPosition.Floating">
+            <summary>
+            Docks element at any position on  panel
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.VisibleRangeChangedEventArgs">
+            <summary>
+            Class implementation for visible range change event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.VisibleRangeChangedEventArgs.NewRange">
+            <summary>
+            Modified range value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.VisibleRangeChangedEventArgs.OldRange">
+            <summary>
+            Previous range value.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.ValueChangedEventArgs">
+            <summary>
+            Class implementation for value change event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ValueChangedEventArgs.Item">
+            <summary>
+            Actual tast item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.ValueChangedEventArgs.UpdateType">
+            <summary>
+            Denotes which part need to update. 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TaskBarResizeStartEventArgs">
+            <summary>
+            Class implementation for task resize start event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarResizeStartEventArgs.Task">
+            <summary>
+            Gets the task which is resized.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarResizeStartEventArgs.ResizingDirection">
+            <summary>
+            Gets the resizing direction of the resizing task.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TaskBarResizeDeltaEventArgs">
+            <summary>
+            Class implementation for task resize delta event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarResizeDeltaEventArgs.Task">
+            <summary>
+            Gets the task which is resized.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarResizeDeltaEventArgs.ResizingDirection">
+            <summary>
+            Gets the resizing direction.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarResizeDeltaEventArgs.ModifiedValue">
+            <summary>
+            Gets the modified value.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TaskBarResizeCompletedEventArgs">
+            <summary>
+            Class implementation for task resize completed event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarResizeCompletedEventArgs.Task">
+            <summary>
+            Gets the task which is resized.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarResizeCompletedEventArgs.ResizingDirection">
+            <summary>
+            Gets the resizing direction.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TaskBarDragStartEventArgs">
+            <summary>
+            Class implementation for task drag start event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarDragStartEventArgs.Task">
+            <summary>
+            Gets the task which is dragged.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TaskBarDragDeltaEventArgs">
+            <summary>
+            Class implementation for task drag delta event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarDragDeltaEventArgs.Task">
+            <summary>
+            Gets the task which is dragged.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarDragDeltaEventArgs.NewStartDate">
+            <summary>
+            Gets the new start date.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskBarDragDeltaEventArgs.NewFinishDate">
+            <summary>
+            Gets the new finish date.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TaskBarDragCompletedEventArgs">
+            <summary>
+            Class implementation for task completed event arguments.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.SelectionChangingEventArgs">
+            <summary>
+            Represents the gantt selection changing event arguments 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SelectionChangingEventArgs.Item">
+            <summary>
+            Gets the selected item which has been set through mouse interaction or SelectedIndex
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SelectionChangingEventArgs.Index">
+            <summary>
+            Gets the index which has been set through mouse interaction or SelectedIndex
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.SelectionChangedEventArgs">
+            <summary>
+            Represents the gantt selection changed event arguments
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SelectionChangedEventArgs.Item">
+            <summary>
+            Gets the selected item which has been set through mouse interaction or SelectedIndex
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.SelectionChangedEventArgs.Index">
+            <summary>
+            Gets the index which has been set through mouse interaction or SelectedIndex
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.BeginCellEditEventArgs">
+            <summary>
+            Represents the gantt cell editing event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.BeginCellEditEventArgs.Item">
+            <summary>
+            Gets the current cell editing item which has been sent through mouse or touch interaction.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.BeginCellEditEventArgs.MappingName">
+            <summary>
+            Gets the current cell mapping name to the column.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.BeginCellEditEventArgs.IsCancel">
+            <summary>
+            Gets or sets a value indicating whether the editing is to be continued or cancelled.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.EndCellEditEventArgs">
+            <summary>
+            Represents the gantt cell edited event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.EndCellEditEventArgs.Item">
+            <summary>
+            Gets the current cell edited item which has been sent through mouse or touch interaction.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.EndCellEditEventArgs.MappingName">
+            <summary>
+            Gets the current cell mapping name to the column.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.GridUtils">
+            <summary>
+            Defines members and methods to handle some generic grid related operations.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.GridUtils.GetResourceContent(System.Collections.Generic.IList{System.String},Syncfusion.UI.Xaml.Gantt.GanttResourceCollection)">
+            <summary>
+            To get the resource column content.
+            </summary>
+            <param name="resources">The resource in an item.</param>
+            <param name="resourceCollection">The gantt resource collection.</param>
+            <returns>Resource column content</returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.LayoutUtils">
+            <summary>
+            Represents the utils class for dock panel layout.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.LayoutUtils.SubtractThickness(Windows.Foundation.Rect,Windows.UI.Xaml.Thickness)">
+            <summary>
+            Subtracts the thickness.
+            </summary>
+            <param name="rect">The rect value.</param>
+            <param name="thickness">The thickness.</param>
+            <returns>The Rectangle</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.LayoutUtils.SubtractThickness(Windows.Foundation.Size,Windows.UI.Xaml.Thickness)">
+            <summary>
+            Subtracts the thickness.
+            </summary>
+            <param name="size">The size value.</param>
+            <param name="thickness">The thickness.</param>
+            <returns>Returns the size</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.LayoutUtils.AddThickness(Windows.Foundation.Rect,Windows.UI.Xaml.Thickness)">
+            <summary>
+            The Addthickness method
+            </summary>
+            <param name="rect">The Rect value</param>
+            <param name="thickness">The thickness</param>
+            <returns>The rectangle</returns>
+            <seealso cref="!:ChartLayoutUtils"/>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.LayoutUtils.AddThickness(Windows.Foundation.Size,Windows.UI.Xaml.Thickness)">
+            <summary>
+            The Addthickness method
+            </summary>
+            <param name="size">The size value</param>
+            <param name="thickness">The thickness value</param>
+            <returns>Returns the size</returns>
+             <seealso cref="!:ChartLayoutUtils"/>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.PredecessorInfo">
+            <summary>
+            Represents the class for PredecessorInfo.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.PredecessorInfo.IsValid">
+            <summary>
+            Gets or sets the connection between the start and end task is valid or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.PredecessorInfo.StartTask">
+            <summary>
+            Gets or sets the start task of the relation.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.PredecessorInfo.DisplayContent">
+            <summary>
+            Gets or sets the display content for predecessor tooltip.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.Range`1">
+            <summary>
+            Represents the class for Range.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Range`1.Start">
+            <summary>
+            Gets the Start value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Range`1.End">
+            <summary>
+            Gets the End value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.Range`1.Delta">
+            <summary>
+            Gets the Delta value
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.Range`1.Contains(`0)">
+            <summary>
+            To check whether the value is within the range.
+            </summary>
+            <param name="value">value to compare.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TaskToolTipInfo">
+            <summary>
+            Represents the class for TaskToolTipInfo.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskToolTipInfo.StartDate">
+            <summary>
+            Gets or sets the task's start date.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskToolTipInfo.FinishDate">
+            <summary>
+            Gets or sets the task's finish date.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskToolTipInfo.Progress">
+            <summary>
+            Gets or sets the task's progress.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TaskToolTipInfo.TaskName">
+            <summary>
+            Gets or sets the task's name.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Gantt.TaskToolTipInfo.PropertyChanged">
+            <summary>
+            Occurs when property's value gets changed.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TemplateUtils">
+            <summary>
+            Represents the utils class for adding template in code behind.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TemplateUtils.GetPopupTemplate(Syncfusion.UI.Xaml.Gantt.TaskAttributes,Syncfusion.UI.Xaml.Gantt.TaskDetail,System.Boolean,Syncfusion.UI.Xaml.Gantt.GanttResourceCollection)">
+            <summary>
+            Method called to add a template for the popup.
+            </summary>
+            <param name="columns"></param>
+            <param name="item"></param>
+            <param name="isEdit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TemplateUtils.GetMobilePopupTemplate(Syncfusion.UI.Xaml.Gantt.TaskAttributes,Syncfusion.UI.Xaml.Gantt.TaskDetail,System.Boolean,Syncfusion.UI.Xaml.Gantt.GanttResourceCollection)">
+            <summary>
+            Method called to add a template for the popup.
+            </summary>
+            <param name="columns"></param>
+            <param name="task"></param>
+            <param name="isEdit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TemplateUtils.GetNavigationTemplate">
+            <summary>
+            Method for displaying template for predecessor tooltip.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Gantt.TimescaleUtil">
+            <summary>
+            Defines members and methods to handle some generic date time operations.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.WeekBeginsOn">
+            <summary>
+            Gets or sets the week begins on.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.CalculateVisibleRange(System.Double,Windows.Foundation.Size,Syncfusion.UI.Xaml.Gantt.Range{System.DateTime},System.Int32,System.Double@)">
+            <summary>
+            The calculate visible range.
+            </summary>
+            <param name="horizontalOffset">The horizontal offset.</param>
+            <param name="availableSize">The available size.</param>
+            <param name="actualRange">The actual range.</param>
+            <param name="bottomTierInterval">The bottom tier interval.</param>
+            <param name="dayWidth">The day cell width.</param>
+            <returns>The visible range.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetMaxCellWidth(Windows.Foundation.Size,Syncfusion.UI.Xaml.Gantt.TimescaleTier,System.Double)">
+            <summary>
+            To get timescale cell maximum width.
+            </summary>
+            <param name="availableSize">The timescale available size.</param>
+            <param name="tier">The timescale tier instance.</param>
+            <param name="cellSize">The cell size.</param>
+            <returns>The maximum cell width.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.CalculateRequiredCells(Syncfusion.UI.Xaml.Gantt.Range{System.DateTime},System.DateTime,System.Int32,Syncfusion.UI.Xaml.Gantt.IntervalType)">
+            <summary>
+            Calculate the required cells.
+            </summary>
+            <param name="visibleRange">The visible range.</param>
+            <param name="actualRangeStart">The actual range start date.</param>
+            <param name="interval">The interval.</param>
+            <param name="intervalType">The interval type.</param>
+            <returns>The required number of cells.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetCeilingDate(System.DateTime,Syncfusion.UI.Xaml.Gantt.IntervalType)">
+            <summary>
+            To get the rounded date.
+            </summary>
+            <param name="instance">The current date.</param>
+            <param name="intervalType">The interval type.</param>
+            <returns>The rounded date.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetNavigatedDate(System.DateTime,Syncfusion.UI.Xaml.Gantt.IntervalType,System.Double)">
+            <summary>
+            To get the navigated date based on given interval type and interval.
+            </summary>
+            <param name="instance">The instance.</param>
+            <param name="intervalType">The interval type.</param>
+            <param name="interval">The interval.</param>
+            <returns>The navigated date</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.ConvertToDayWidth(System.Double,Syncfusion.UI.Xaml.Gantt.IntervalType)">
+            <summary>
+            To convert the given MaxCellWidth into day width.
+            </summary>
+            <param name="maxCellWidth">The max cell width.</param>
+            <param name="intervalType">The interval type.</param>
+            <returns>The day cell width.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetDayWidth(Syncfusion.UI.Xaml.Gantt.TimescaleSettings)">
+            <summary>
+            To calculate day width.
+            </summary>
+            <param name="settings">The timescale settings.</param>
+            <returns>The day width.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.CalculateCellWidth(Syncfusion.UI.Xaml.Gantt.IntervalType,System.Double,System.Int32)">
+            <summary>
+            Calculate the cell width based on its interval type, interval and day width.
+            </summary>
+            <param name="intervalType">The interval type.</param>
+            <param name="dayWidth">The day width.</param>
+            <param name="interval">The interval.</param>
+            <returns>The cell width.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetValidatedDayWidth(Syncfusion.UI.Xaml.Gantt.Range{System.DateTime},Windows.Foundation.Size,System.Double,System.Int32)">
+            <summary>
+            To get the validated day width.
+            </summary>
+            <param name="visibleRange">Timescale visible range.</param>
+            <param name="availableSize">Timescale available size.</param>
+            <param name="dayWidth">The day width.</param>
+            <param name="bottomTierInterval">bottom tier's interval.</param>
+            <returns>
+            <c>updated day width</c> if chart view width less than view port width; otherwise <c>same day width</c>.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.CalculateActualIntervalType(Syncfusion.UI.Xaml.Gantt.Range{System.DateTime})">
+            <summary>
+            Calculate actual interval type.
+            </summary>
+            <param name="actualRange">The timescale actual range.</param>
+            <returns>The actual interval type.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetActualDate(System.DateTime,System.Double,System.Double,System.Int32)">
+            <summary>
+            To get the actual date.
+            </summary>
+            <param name="date">The current date.</param>
+            <param name="change">The current change.</param>
+            <param name="dayWidth">The day width.</param>
+            <param name="bottomTierInterval">The Bottom tier interval.</param>
+            <returns>The actual date.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetWidth(System.DateTime,System.DateTime,System.Int32,System.Double)">
+            <summary>
+            To calculate the width between given dates.
+            </summary>
+            <param name="startDate">The start date.</param>
+            <param name="endDate">The end date.</param>
+            <param name="bottomTierInterval">The bottom tier interval.</param>
+            <param name="dayWidth">The day width.</param>
+            <returns>The width between given dates.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetDuration(System.DateTime,System.DateTime)">
+            <summary>
+            To find the total days between given dates.
+            </summary>
+            <param name="startDate">The start date</param>
+            <param name="endDate">The end date.</param>
+            <returns>Total days between start and end date.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.SetActualIntervalType(Syncfusion.UI.Xaml.Gantt.TimescaleSettings,Syncfusion.UI.Xaml.Gantt.Tier,Syncfusion.UI.Xaml.Gantt.Range{System.DateTime})">
+            <summary>
+            To set actual interval type.
+            </summary>
+            <param name="settings">The timescale settings.</param>
+            <param name="currentTier">The current tier.</param>
+            <param name="actualRange">The timescale actual range.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetSortedTiers(System.Collections.ObjectModel.ObservableCollection{Syncfusion.UI.Xaml.Gantt.TimescaleTier})">
+            <summary>
+            To sort the given tier collection in descending order based on tier value.
+            </summary>
+            <param name="tiers">The tier collection.</param>
+            <returns>The sorted tier collection.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetCellContent(System.DateTime,Syncfusion.UI.Xaml.Gantt.TimescaleTier)">
+            <summary>
+            To get the formatted string of given date.
+            </summary>
+            <param name="date">The current date.</param>
+            <param name="tier">The tier</param>
+            <returns>The formatted string of given date.</returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetWeekendsCount(System.DateTime,System.DateTime,System.Collections.Generic.List{System.DayOfWeek})">
+            <summary>
+            To get the number of weekends between two days.
+            </summary>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <param name="weekends"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetNextWeekend(System.DateTime,System.Collections.Generic.List{System.DayOfWeek})">
+            <summary>
+            To get the next weekend day.
+            </summary>
+            <param name="Date"></param>
+            <param name="weekends"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetFloorDate(System.DateTime)">
+            <summary>
+            To Round the hour,minute and seconds for the date.
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.TimescaleUtil.GetDayOfWeek(Syncfusion.UI.Xaml.Gantt.Days)">
+            <summary>
+            Gets the particular day of week.
+            </summary>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.Panel">
+            <summary>
+            Get the panel
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.Count">
+            <summary>
+            Get the value of CLR property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.BindingProvider">
+            <summary>
+            Provides binding objects to be attached with the generated FrameworkElement.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.GeneratedElements">
+            <summary>
+            Get the value of the generated elements.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.#ctor(Windows.UI.Xaml.Controls.Panel)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="panel"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.GenerateElements(System.Int32)">
+            <summary>
+            Generates or recycles the elements
+            </summary>
+            <param name="count">Number of elements to be generated</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.Add(`0)">
+            <summary>
+            Method used to add a element in the panel.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.IndexOf(`0)">
+            <summary>
+            Indexes the of.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.Remove(`0)">
+            <summary>
+            Method used to remove the element from the panel.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.CreateNewInstance">
+            <summary>
+            Creates a new instance of the specified type
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.RemoveBinding(Windows.UI.Xaml.DependencyProperty)">
+            <summary>
+            Removes the particular binding from the generated elements
+            </summary>
+            <param name="property"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.Clear">
+            <summary>
+            Clears the generated elements
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.Item(System.Int32)">
+            <summary>
+            Return the panel's child at the corresponding index
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Gantt.UIElementsRecycler`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.SfGantt.UWP.Syncfusion_SfGantt_UWP_2015_XamlTypeInfo.XamlMetaDataProvider.GetXamlType(System.Type)">
+            <summary>
+            GetXamlType(Type)
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGantt.UWP.Syncfusion_SfGantt_UWP_2015_XamlTypeInfo.XamlMetaDataProvider.GetXamlType(System.String)">
+            <summary>
+            GetXamlType(String)
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGantt.UWP.Syncfusion_SfGantt_UWP_2015_XamlTypeInfo.XamlMetaDataProvider.GetXmlnsDefinitions">
+            <summary>
+            GetXmlnsDefinitions()
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuthenticationFailed_Message" xml:space="preserve">
+    <value>Authentication failed. Please try again!</value>
+  </data>
+  <data name="AuthenticationFailed_Title" xml:space="preserve">
+    <value>Authentication failed</value>
+  </data>
+  <data name="AuthenticationRequired_Message" xml:space="preserve">
+    <value>We require users to authenticate before contributing.</value>
+  </data>
+  <data name="AuthenticationRequired_Title" xml:space="preserve">
+    <value>Authentication required</value>
+  </data>
+  <data name="CameraNotFound_Message" xml:space="preserve">
+    <value>We couldn't find a camera attached to your device. Please check the connection to your camera and try again.</value>
+  </data>
+  <data name="CameraNotFound_Title" xml:space="preserve">
+    <value>No camera attached</value>
+  </data>
+  <data name="CategoryAlreadyExists_Message" xml:space="preserve">
+    <value>The category you suggested is already existing. Please choose another one.</value>
+  </data>
+  <data name="CategoryAlreadyExists_Title" xml:space="preserve">
+    <value>Category exists</value>
+  </data>
+  <data name="CreateCategoryRequestConfirmation_Message" xml:space="preserve">
+    <value>The category does not exist. Do you want to create it?</value>
+  </data>
+  <data name="CreateCategoryRequestConfirmation_Title" xml:space="preserve">
+    <value>Create category</value>
+  </data>
+  <data name="DeleteComment_Message" xml:space="preserve">
+    <value>Are you sure you want to delete this comment?  Gold will not be refunded.</value>
+  </data>
+  <data name="DeleteComment_Title" xml:space="preserve">
+    <value>Delete comment</value>
+  </data>
+  <data name="DeleteProfilePicture_Message" xml:space="preserve">
+    <value>Please change your profile picture before deleting it.</value>
+  </data>
+  <data name="DeleteProfilePicture_Title" xml:space="preserve">
+    <value>Unable to delete current profile picture</value>
+  </data>
+  <data name="CroppingError_Message" xml:space="preserve">
+    <value>The photo could not be cropped. Please select a different one and try again.</value>
+  </data>
+  <data name="GenericError_Message" xml:space="preserve">
+    <value>Oops... Something went wrong. Please try again.</value>
+  </data>
+  <data name="GenericError_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="InsufficientBalance_Message" xml:space="preserve">
+    <value>You don't have enough Gold in your account. You can upload a photo or purchase Gold to increase your balance.</value>
+  </data>
+  <data name="InsufficientBalance_Title" xml:space="preserve">
+    <value>Insufficient Gold Balance</value>
+  </data>
+  <data name="InvalidImage_Message" xml:space="preserve">
+    <value>The photo you provided could not be loaded. Please select a different one.</value>
+  </data>
+  <data name="InvalidImage_Title" xml:space="preserve">
+    <value>Invalid image</value>
+  </data>
+  <data name="InvalidImageSize_Message" xml:space="preserve">
+    <value>The photo you selected is too small. It must be at least {0} x {0} pixels.</value>
+  </data>
+  <data name="InvalidImageSize_Title" xml:space="preserve">
+    <value>Invalid photo size</value>
+  </data>
+  <data name="MessageDialog_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="MessageDialog_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="MessageDialog_Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="MessageDialog_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="PurchaseError_Message" xml:space="preserve">
+    <value>Purchase was not successful. Please try again.</value>
+  </data>
+  <data name="PurchaseError_Title" xml:space="preserve">
+    <value>Purchase not successful</value>
+  </data>
+  <data name="PurchaseSuccess_Message" xml:space="preserve">
+    <value>Great! You've increased your Gold balance!</value>
+  </data>
+  <data name="PurchaseSuccess_Title" xml:space="preserve">
+    <value>Purchase successful</value>
+  </data>
+  <data name="ReportContent_Message" xml:space="preserve">
+    <value>Are you sure you want to report this content?</value>
+  </data>
+  <data name="ReportContent_Title" xml:space="preserve">
+    <value>File a Report</value>
+  </data>
+  <data name="ServiceError_Message" xml:space="preserve">
+    <value>There was an error establishing a connection to our servers. Please try again.</value>
+  </data>
+  <data name="ServiceError_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="SignInPage_ReassuranceMessage" xml:space="preserve">
+    <value>We use the above providers for authentication only. We won't post anything without your permission. Promise. =)</value>
+  </data>
+  <data name="UnexpectedError_Message" xml:space="preserve">
+    <value>We've encountered an unexpected error. Our engineers have been notified.</value>
+  </data>
+  <data name="UnexpectedError_Title" xml:space="preserve">
+    <value>Unexpected error</value>
+  </data>
+  <data name="WelcomePage_Instruction1_Content" xml:space="preserve">
+    <value>{0} allows you to keep your income and expenses under control.</value>
+  </data>
+  <data name="WelcomePage_Instruction1_Title" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="WelcomePage_Instruction2_Content" xml:space="preserve">
+    <value>Browse your expenses and incomes of the day, it's easy!</value>
+  </data>
+  <data name="WelcomePage_Instruction2_Title" xml:space="preserve">
+    <value>Explore</value>
+  </data>
+  <data name="WelcomePage_Instruction3_Content" xml:space="preserve">
+    <value>Use the navigation bar to quickly access your data.</value>
+  </data>
+  <data name="WelcomePage_Instruction3_Title" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="WelcomePage_Instruction4_Content" xml:space="preserve">
+    <value>That was easy, right? You should be ready to do your first entry in Balance Sheet.</value>
+  </data>
+  <data name="WelcomePage_Instruction4_Title" xml:space="preserve">
+    <value>Ready?</value>
+  </data>
+  <data name="AppName.Text" xml:space="preserve">
+    <value>Balance Sheet</value>
+  </data>
+  <data name="WelcomePage_ButtonStart_Text" xml:space="preserve">
+    <value>Get Started!</value>
+  </data>
+  <data name="Accessoires" xml:space="preserve">
+    <value>Accessoires</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Bakery" xml:space="preserve">
+    <value>Bakery</value>
+  </data>
+  <data name="Bank" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <data name="BtnCostsHome" xml:space="preserve">
+    <value>New‌ costs</value>
+  </data>
+  <data name="BtnIncomesHome" xml:space="preserve">
+    <value>New incomes</value>
+  </data>
+  <data name="Cafe" xml:space="preserve">
+    <value>Cafe</value>
+  </data>
+  <data name="Cosmetics" xml:space="preserve">
+    <value>Cosmetics</value>
+  </data>
+  <data name="Costs" xml:space="preserve">
+    <value>Costs</value>
+  </data>
+  <data name="Dress" xml:space="preserve">
+    <value>Dress</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>Drinks</value>
+  </data>
+  <data name="Entertainment" xml:space="preserve">
+    <value>Entertainment</value>
+  </data>
+  <data name="Extracosts" xml:space="preserve">
+    <value>Utilities</value>
+  </data>
+  <data name="Fine" xml:space="preserve">
+    <value>Fine</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>Fixed costs</value>
+  </data>
+  <data name="Flightticket" xml:space="preserve">
+    <value>Flight tickets</value>
+  </data>
+  <data name="Foods" xml:space="preserve">
+    <value>Foods</value>
+  </data>
+  <data name="FruitVegetabele" xml:space="preserve">
+    <value>Fruit and vegetabele</value>
+  </data>
+  <data name="Fuel" xml:space="preserve">
+    <value>Fuel</value>
+  </data>
+  <data name="Groundshuld" xml:space="preserve">
+    <value>Mortgage law</value>
+  </data>
+  <data name="Hairdressing" xml:space="preserve">
+    <value>Hairdressing</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="IhreBalance.Text" xml:space="preserve">
+    <value>Your Balance:</value>
+  </data>
+  <data name="InsuranceFix" xml:space="preserve">
+    <value>Insurance</value>
+  </data>
+  <data name="Internet" xml:space="preserve">
+    <value>Internet</value>
+  </data>
+  <data name="Kino" xml:space="preserve">
+    <value>Kino</value>
+  </data>
+  <data name="Meat" xml:space="preserve">
+    <value>Meat</value>
+  </data>
+  <data name="Medicine" xml:space="preserve">
+    <value>Medicine</value>
+  </data>
+  <data name="Meer" xml:space="preserve">
+    <value>Marine products</value>
+  </data>
+  <data name="Milk" xml:space="preserve">
+    <value>Milk products</value>
+  </data>
+  <data name="Monthlyticket" xml:space="preserve">
+    <value>Season tickets</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="OtherCosts" xml:space="preserve">
+    <value>Other costs</value>
+  </data>
+  <data name="OtherIncomes" xml:space="preserve">
+    <value>Other incomes</value>
+  </data>
+  <data name="Pizza" xml:space="preserve">
+    <value>Pizza</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Private costs</value>
+  </data>
+  <data name="Rental" xml:space="preserve">
+    <value>Rental</value>
+  </data>
+  <data name="Repair" xml:space="preserve">
+    <value>Repair costs</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="Salary" xml:space="preserve">
+    <value>Salary</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SingIn" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="Singleticket" xml:space="preserve">
+    <value>Single ticket</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="Sweetnes" xml:space="preserve">
+    <value>Sweetnes</value>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="Taxi" xml:space="preserve">
+    <value>Taxi</value>
+  </data>
+  <data name="Telefons" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Theatre" xml:space="preserve">
+    <value>Theatre</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Trainticket" xml:space="preserve">
+    <value>Train tickets</value>
+  </data>
+  <data name="Transport" xml:space="preserve">
+    <value>Transport</value>
+  </data>
+  <data name="TV" xml:space="preserve">
+    <value>TV</value>
+  </data>
+  <data name="TxtBalanceHome" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="TxtCostsHome" xml:space="preserve">
+    <value>Costs</value>
+  </data>
+  <data name="TxtIncomesHome" xml:space="preserve">
+    <value>Incomes</value>
+  </data>
+  <data name="Wash" xml:space="preserve">
+    <value>Wash</value>
+  </data>
+  <data name="Wellness" xml:space="preserve">
+    <value>Wellness</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>No data found</value>
+  </data>
+  <data name="Apps" xml:space="preserve">
+    <value>Apps and Service</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="House" xml:space="preserve">
+    <value>For House</value>
+  </data>
+  <data name="Vacation" xml:space="preserve">
+    <value>Vacation</value>
+  </data>
+  <data name="OtherAuto" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="OtherEntertainment" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="OtherFix" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="OtherFoods" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="OtherPrivate" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="OtherTransport" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="BtnCancel.Content" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="BtnNext" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="CancelSelectionBtn.Label" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="CheckGleichDatumInterval" xml:space="preserve">
+    <value>Select the same date or date range for all categories</value>
+  </data>
+  <data name="CheckInterval" xml:space="preserve">
+    <value>Select the date range</value>
+  </data>
+  <data name="CmBoxItemCost.Content" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="CmBoxItemIncome.Content" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="DeleteItemsBtn.Label" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="DialogContent" xml:space="preserve">
+    <value>Are you sure you want to delete the data?</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="InsuranceAuto" xml:space="preserve">
+    <value>Insurance</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="SelectItmesBtn.Label" xml:space="preserve">
+    <value>Select</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="TtlDelete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="TxtChoose" xml:space="preserve">
+    <value>Please choose your desired date or date range</value>
+  </data>
+  <data name="TxtPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>Page.BottomAppBar</comment>
+  </data>
+  <data name="HelpPage_Instruction1_Content" xml:space="preserve">
+    <value>You can easily view your costs and incomes</value>
+  </data>
+  <data name="HelpPage_Instruction2_Content" xml:space="preserve">
+    <value>You can easily determine, what you spent more money on</value>
+  </data>
+  <data name="MonatWahl.Text" xml:space="preserve">
+    <value>Please select month</value>
+  </data>
+</root>

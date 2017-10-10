@@ -1,0 +1,239 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="BalanceSheet.Views.Mobile.CalendarPage_Mobile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:BalanceSheet.Controls"
+    xmlns:converter="using:BalanceSheet.ValueConverters"
+    xmlns:data="using:BalanceSheet.Models" FontFamily="Segoe Print"
+    mc:Ignorable="d" Margin="0,-23,0,0"                     >
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <EntranceThemeTransition/>
+        </TransitionCollection>
+    </Page.Transitions>
+    <Page.BottomAppBar>
+        <CommandBar Foreground="White" 
+                    HorizontalAlignment="Stretch">
+            <CommandBar.Background>
+                <SolidColorBrush Color="#FF08709E"/>
+            </CommandBar.Background>
+            <AppBarButton x:ConnectionId='2' x:Uid="SelectItmesBtn" x:Name="SelectItmesBtn" 
+                          Foreground="White" 
+                          FontFamily="Segoe Print" 
+                                                      >
+                <AppBarButton.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" 
+                              Glyph="&#xe762;" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton x:ConnectionId='3' x:Uid="DeleteItemsBtn" x:Name="DeleteItemsBtn" 
+                          Foreground="White" 
+                          FontFamily="Segoe Print" 
+                          Icon="Delete" 
+                                                       />
+            <AppBarButton x:ConnectionId='4' x:Uid="CancelSelectionBtn" x:Name="CancelSelectionBtn"
+                          FontFamily="Segoe Print" 
+                          Foreground="White" 
+                          Icon="Cancel" 
+                                                           />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Page.Resources>
+
+        <converter:NameFromRessourceConverter x:ConnectionId='5' x:Name="NameFromRessourceFormatConverter"/>
+
+        <!-- When using x:Bind, you need to set x:DataType -->
+        <DataTemplate x:ConnectionId='6' x:Name="BalanceListViewTemplate" 
+                                                   >
+            <Grid x:ConnectionId='7'>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:ConnectionId='8' Foreground="White"
+                           Grid.RowSpan="2"
+                           Width="90"
+                                                
+                           TextAlignment="Right"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                         />
+                <TextBlock x:ConnectionId='9' Foreground="White" 
+                           Grid.Column="1"
+                                                
+                                        
+                           FontFamily="Segoe Print"
+                           Style="{ThemeResource BaseTextBlockStyle}"
+                           Margin="12,6,0,0"/>
+                <TextBlock Foreground="White"
+                           Grid.Column="1"
+                           Grid.Row="1"
+                           FontFamily="Segoe Print"
+                           Text="{Binding Category, Mode=OneWay, 
+                            Converter={StaticResource NameFromRessourceFormatConverter}}" 
+                           Style="{ThemeResource BodyTextBlockStyle}"
+                           Margin="12,0,0,6"/>
+            </Grid>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Grid>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <!--175 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1007" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="84"/>
+                        <Setter Target="rowSecond.Height" Value="84"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+                <!--150 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="74"/>
+                        <Setter Target="rowSecond.Height" Value="74"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+                <!--125 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="360" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="62"/>
+                        <Setter Target="rowSecond.Height" Value="62"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+                <!--100 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="48"/>
+                        <Setter Target="rowSecond.Height" Value="48"/>
+                        <Setter Target="datePicker.Margin" Value="5,10,5,5"/>
+                        <Setter Target="gridButton.Margin" Value="5,5,5,5"/>
+                        <Setter Target="listView.Margin" Value="5,5,5,10"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:ConnectionId='10' x:Name="BalanceDetailsStatesGroup">
+                <VisualState x:ConnectionId='11' x:Name="BalanceState">
+                    <VisualState.Setters>
+                        <Setter Target="BalanceListView.SelectionMode" Value="None" />
+                        <Setter Target="BalanceListView.IsItemClickEnabled" Value="True" />
+                        <!--#region App Bar Commands-->
+                        <Setter Target="SelectItmesBtn.Visibility" Value="Visible" />
+                        <Setter Target="DeleteItemsBtn.Visibility" Value="Collapsed" />
+                        <Setter Target="CancelSelectionBtn.Visibility" Value="Collapsed" />
+                        <!--#endregion-->
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='12' x:Name="BalanceDetailsState">
+                    <VisualState.Setters>
+                        <Setter Target="BalanceListView.SelectionMode" Value="Extended" />
+                        <Setter Target="BalanceListView.IsItemClickEnabled" Value="False" />
+                        <!--#region App Bar Commands-->
+                        <Setter Target="SelectItmesBtn.Visibility" Value="Visible" />
+                        <Setter Target="DeleteItemsBtn.Visibility" Value="Visible" />
+                        <Setter Target="CancelSelectionBtn.Visibility" Value="Collapsed" />
+                        <!--#endregion-->
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='13' x:Name="ExtendedSelectionState">
+                    <VisualState.Setters>
+                        <!--#region App Bar Commands-->
+                        <Setter Target="SelectItmesBtn.Visibility" Value="Collapsed" />
+                        <Setter Target="DeleteItemsBtn.Visibility" Value="Visible" />
+                        <Setter Target="CancelSelectionBtn.Visibility" Value="Visible" />
+                        <!--#endregion-->
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='14' x:Name="MultipleSelectionState">
+                    <VisualState.Setters>
+                        <Setter Target="BalanceListView.SelectionMode" Value="Multiple" />
+                        <Setter Target="BalanceListView.IsItemClickEnabled" Value="False" />
+                        <!--#region App Bar Commands-->
+                        <Setter Target="SelectItmesBtn.Visibility" Value="Collapsed" />
+                        <Setter Target="DeleteItemsBtn.Visibility" Value="Visible" />
+                        <Setter Target="CancelSelectionBtn.Visibility" Value="Visible" />
+                        <!--#endregion-->
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid Background="#FF119DDA" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="0,25,0,5">
+                <controls:UserControlHeader x:ConnectionId='18'                                                                          />
+            </Grid>
+
+            <Grid Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="2,0" Background="#119DDA">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Rectangle Grid.Row="0" Height="1" Fill="White" Margin="0,0"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <DatePicker x:ConnectionId='16' x:Name="datePicker"  Grid.Column="0" Style="{StaticResource DatePickerUserStyle}" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="14" DayFormat="{}{day.integer(2)}"                                     />
+                    <Button x:ConnectionId='17' x:Name="btnAddPlus" Grid.Column="1" Background="#FF119DDA" Foreground="White" Content="&#59152;" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="50" Height="50" Style="{StaticResource ButtonUserStyle}" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" FontSize="18" BorderBrush="{x:Null}"                         />
+                </Grid>
+                <Rectangle Grid.Row="2" Height="1" Fill="White" Margin="0,0"/>
+            </Grid>
+            <Grid Grid.Row="3" Margin="2,0">
+                <ListView x:ConnectionId='15' x:Name="BalanceListView" 
+                      SelectionMode="Extended"
+                                                           
+                      IsItemClickEnabled="True"
+                      ItemsSource="{Binding}"
+                      ItemTemplate="{StaticResource BalanceListViewTemplate }"
+                      ShowsScrollingPlaceholders="False"
+                                             
+                      Margin="0,-1"                                                                    >
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" 
+                                Value="Stretch" />
+                            <Setter Property="Margin" Value="0,0"/>
+                            <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+

@@ -1,0 +1,113 @@
+﻿<Page
+    x:Class="BalanceSheet.Views.CalendarPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:triggers="using:BalanceSheet.StateTriggers"
+    xmlns:controls="using:BalanceSheet.Controls"
+    mc:Ignorable="d">
+
+    <Grid>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <!--200 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1300" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="calendarView.Width" Value="592" />
+                        <Setter Target="calendarView.Height" Value="664"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!--175 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1007" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="calendarView.Width" Value="512" />
+                        <Setter Target="calendarView.Height" Value="581"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!--150 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="calendarView.Width" Value="444" />
+                        <Setter Target="calendarView.Height" Value="498"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!--125 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="400" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="calendarView.Width" Value="370" />
+                        <Setter Target="calendarView.Height" Value="415" />
+                        <Setter Target="calendarView.Margin" Value="0,40,0,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <!--100 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="calendarView.Width" Value="296" />
+                        <Setter Target="calendarView.Height" Value="332"/>
+                        <Setter Target="calendarView.Margin" Value="0,40,0,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <!--<controls:PageHeader>
+            <controls:PageHeader.HeaderContent>
+                <TextBlock Text="{Binding Category.Name}" Style="{ThemeResource PageTitleTextBlockStyle}" />
+            </controls:PageHeader.HeaderContent>
+        </controls:PageHeader>-->
+
+        <Grid x:ConnectionId='1' x:Name="mainGrid" Background="#119DDA">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MaxWidth="600"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <CalendarView x:ConnectionId='3' x:Name="calendarView" Grid.Row="0" Background="{x:Null}" OutOfScopeBackground="{x:Null}" OutOfScopeForeground="#68000000" CalendarItemBackground="{x:Null}" BorderBrush="{x:Null}" Foreground="White" CalendarItemForeground="White" HoverBorderBrush="#FFFFCB46" PressedBorderBrush="White" PressedForeground="#CCFFCB46" SelectedForeground="#FFFFCB46" Style="{StaticResource CalendarViewUserStyle}" FirstDayOfWeek="Monday" IsTabStop="False"  FirstOfMonthLabelFontWeight="Light" FirstOfMonthLabelFontSize="12" FirstOfMonthLabelFontFamily="Segoe"  IsGroupLabelVisible="True" Margin="10">
+                        <CalendarView.SelectedHoverBorderBrush>
+                            <SolidColorBrush Color="#FFFFCB46" Opacity="0.8"/>
+                        </CalendarView.SelectedHoverBorderBrush>
+                        <CalendarView.SelectedPressedBorderBrush>
+                            <SolidColorBrush Color="#FFFFCB46"/>
+                        </CalendarView.SelectedPressedBorderBrush>
+                        <CalendarView.SelectedBorderBrush>
+                            <SolidColorBrush Color="#FFFFCB46"/>
+                        </CalendarView.SelectedBorderBrush>
+                    </CalendarView>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Rectangle StrokeThickness="1" Margin="0,5,0,5" Width="1" HorizontalAlignment="Left" VerticalAlignment="Stretch" Fill="White"/>
+                <ListView x:ConnectionId='2' Name="listView"  Margin="5,0,5,20"
+                  IsItemClickEnabled="True" Background="#FF119DDA"
+                  Style="{StaticResource ListViewUserStyle}"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Page>
+

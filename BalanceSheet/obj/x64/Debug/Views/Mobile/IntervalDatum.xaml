@@ -1,0 +1,30 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="BalanceSheet.Views.Mobile.IntervalDatum"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Views.Mobile"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Margin="0,-23,0,0" FontFamily="Segoe Print"                     >
+
+    <Grid Background="#FF119DDA" Opacity="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Bitte wählen Sie Ihr gewünschte Datum, oder ein Datumsbereich" TextWrapping="Wrap" Opacity="1" Foreground="White" Margin="10,20,10,10" FontSize="16"/>
+        <CheckBox x:ConnectionId='2' x:Name="CheckInterval" Grid.Row="1" Content="Datumsbereich wählen" Foreground="White" Margin="10" HorizontalAlignment="Center"                                                                       />
+        <DatePicker Grid.Row="2" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center" />
+        <Grid Grid.Row="3">
+            <DatePicker x:ConnectionId='4' x:Name="DatePickerSeconder"  HorizontalAlignment="Center"
+                    Foreground="White" IsEnabled="False"/>
+        </Grid>
+        <Button x:ConnectionId='3' Grid.Row="4" Content="Weiter" Foreground="White" HorizontalAlignment="Center" FontFamily="Segoe Print" FontSize="16"                      Style="{StaticResource RundeButtonUserStyle}" Height="90" Width="90"/>
+
+
+    </Grid>
+</Page>
+

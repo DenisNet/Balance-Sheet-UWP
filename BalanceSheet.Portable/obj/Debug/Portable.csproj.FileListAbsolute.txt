@@ -1,0 +1,16 @@
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\bin\Debug\BalanceSheet.Portable.dll
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\bin\Debug\BalanceSheet.Portable.pdb
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\bin\Debug\BalanceSheet.Portable.pri
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\BalanceSheet.Portable.dll
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\BalanceSheet.Portable.pdb
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\priconfig.xml
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\priconfig.xml.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\layout.resfiles
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\layout.resfiles.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\resources.resfiles
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\resources.resfiles.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\pri.resfiles
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\pri.resfiles.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\qualifiers.txt
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Denis\documents\visual studio 2015\Projects\BalanceSheet\BalanceSheet.Portable\obj\Debug\MultipleQualifiersPerDimensionFound.txt

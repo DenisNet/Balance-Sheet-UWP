@@ -1,0 +1,274 @@
+﻿<Page
+    x:Class="BalanceSheet.Views.Mobile.AddPage_Mobile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Views.Mobile"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Margin="0,-23,0,0">
+
+    <Grid x:ConnectionId='1' x:Name="gridMain" Background="#FF119DDA">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <!--175 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1007" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="84"/>
+                        <Setter Target="rowSecond.Height" Value="84"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+                <!--150 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="74"/>
+                        <Setter Target="rowSecond.Height" Value="74"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+                <!--125 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="360" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="62"/>
+                        <Setter Target="rowSecond.Height" Value="62"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+                <!--100 %-->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="rowFirst.Height" Value="48"/>
+                        <Setter Target="rowSecond.Height" Value="48"/>
+                        <Setter Target="datePicker.Margin" Value="5,10,5,5"/>
+                        <Setter Target="gridButton.Margin" Value="5,5,5,5"/>
+                        <Setter Target="listView.Margin" Value="5,5,5,10"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <Grid x:ConnectionId='2' x:Name="grid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--Obere Teil-->
+            <Grid x:ConnectionId='3' x:Name="grid1" Grid.Row="0" HorizontalAlignment="Stretch"
+                  VerticalAlignment="Center" Margin="0,15,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" HorizontalAlignment="Left">
+                    <Button x:ConnectionId='32' x:Name="BtnCancel" x:Uid="BtnCancel"
+                            FontFamily="Segoe Print"
+                            Content="Abbrechen" Foreground="White"
+                            Margin="5,35,0,0" Background="{x:Null}"
+                            Style="{StaticResource TextBlockButtonStyle}" 
+                                                 />
+                </Grid>
+                <Grid Grid.Column="1" HorizontalAlignment="Center">
+                    <ComboBox x:ConnectionId='29' x:Name="comboBox" SelectedIndex="0" FontSize="16"  Foreground="White" BorderThickness="0" Background="#FF119DDA"  Style="{StaticResource ComboBoxUserStyle}"                                                                                   Margin="5,35,5,0">
+                        <ComboBoxItem x:ConnectionId='30' x:Name="CmBoxItemCost" x:Uid="CmBoxItemCost" Width="{Binding ActualWidth, ElementName=gridMain, Mode=OneWay}" HorizontalAlignment="Center" Foreground="White" Style="{StaticResource comboBoxItemUser}" BorderBrush="White" BorderThickness="0,0,0,1" FontSize="16" Margin="5,0,5,0" />
+                        <ComboBoxItem x:ConnectionId='31' x:Name="CmBoxItemIncome" x:Uid="CmBoxItemIncome" HorizontalAlignment="Center" Foreground="White" Style="{StaticResource comboBoxItemUser}" FontSize="16" Width="{Binding ActualWidth, ElementName=gridMain, Mode=OneWay}" BorderBrush="White" BorderThickness="0,0,0,1" Margin="5,0,5,0"/>
+                    </ComboBox>
+                </Grid>
+            </Grid>
+            <Rectangle Grid.Row="1" Height="1" Fill="White" Margin="5"/>
+
+            <!-- Content Beginn-->
+            <Grid x:ConnectionId='4' x:Name="gridListView" Grid.Row="2">
+                <!--Ausgaben-->
+                <Grid x:ConnectionId='5' x:Name="gridListViewAusgaben" Margin="0,5" 
+                      Visibility="Visible">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel x:ConnectionId='6' x:Name="fixKostenStack" 
+                                Grid.Column="0" Grid.Row="0">
+                        <Button x:ConnectionId='27' x:Name="fixKosten" 
+                                Style="{StaticResource RundeButtonUserStyle}"
+                                HorizontalAlignment="Center"
+                                Content="&#xE825;" 
+                                FontFamily="Segoe MDL2 Assets" 
+                                Foreground="White" FontSize="30"
+                                Padding="8,0,6,4"                           />
+                        <TextBlock x:ConnectionId='28' x:Name="txtFixkosten" Text="Fixkosten" Foreground="White" 
+                                   FontFamily="Segoe Print"
+                                   HorizontalAlignment="Center" FontSize="13"
+                                   Margin="5,0" TextWrapping="Wrap" TextAlignment="Center"
+                                   VerticalAlignment="Bottom"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <Button x:ConnectionId='25' x:Name="food" 
+                                Style="{StaticResource RundeButtonUserStyle}"
+                                HorizontalAlignment="Center"
+                                Content="&#xF119;" 
+                                FontFamily="{StaticResource FoodIcon}" 
+                                Foreground="White" FontSize="30" 
+                                FontWeight="Bold" Padding="8,4,4,4"
+                                                     />
+                        <TextBlock x:ConnectionId='26' x:Name="txtFoods" Foreground="White"
+                                   FontFamily="Segoe Print"
+                                   TextWrapping="Wrap" TextAlignment="Center"
+                                   HorizontalAlignment="Center" FontSize="13"
+                                   VerticalAlignment="Bottom" 
+                                   Margin="5,0"
+                            Text="Lebensmittel"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <Button x:ConnectionId='23' x:Name="auto"
+                                Style="{StaticResource RundeButtonUserStyle}"
+                                HorizontalAlignment="Center"
+                                Content="&#xE804;" 
+                                FontFamily="Segoe MDL2 Assets" 
+                                Foreground="White" FontSize="30"
+                                Padding="8,0,8,6"                      />
+                        <TextBlock x:ConnectionId='24' x:Name="txtAuto" Text="Auto" Foreground="White" 
+                                   FontFamily="Segoe Print"
+                                   HorizontalAlignment="Center" FontSize="13"
+                                   VerticalAlignment="Bottom" 
+                                   TextWrapping="Wrap" TextAlignment="Center"
+                                   Margin="5,0"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3">
+                        <Button x:ConnectionId='21' x:Name="bildung"
+                                Style="{StaticResource RundeButtonUserStyle}"
+                                HorizontalAlignment="Center"
+                                Content="&#xE7BE;" 
+                                FontFamily="Segoe MDL2 Assets"
+                                Foreground="White" FontSize="30"                      />
+                        <TextBlock x:ConnectionId='22' x:Name="txtBildung" Text="Bildung" Foreground="White" 
+                                   FontFamily="Segoe Print"
+                                   HorizontalAlignment="Center" FontSize="13"
+                                   VerticalAlignment="Bottom"
+                                   TextWrapping="Wrap" TextAlignment="Center"
+                                   Margin="5,0"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1">
+                        <Button x:ConnectionId='19' x:Name="softService" 
+                                Style="{StaticResource RundeButtonUserStyle}"
+                                HorizontalAlignment="Center"
+                                Content="&#xE975;" 
+                                FontFamily="Segoe MDL2 Assets" 
+                                Foreground="White" FontSize="30"                          />
+                        <TextBlock x:ConnectionId='20' x:Name="txtApp" Foreground="White"
+                                   FontFamily="Segoe Print"
+                                   HorizontalAlignment="Center" FontSize="13"
+                                   VerticalAlignment="Bottom" 
+                                   TextWrapping="Wrap" TextAlignment="Center"
+                                   Margin="5,0" Text="Apps/Service"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Grid.Row="1">
+                        <Button x:ConnectionId='17' x:Name="urlaub" 
+                                Style="{StaticResource RundeButtonUserStyle}"
+                                HorizontalAlignment="Center"
+                                Content="&#xF157;" 
+                                FontFamily="{StaticResource TravelIcon}" 
+                                FontWeight="ExtraBold" Foreground="White" 
+                                FontSize="30" Padding="8,0,8,4"                     />
+                        <TextBlock x:ConnectionId='18' x:Name="txtUrlaub" Text="Urlaub" Foreground="White" 
+                                   FontFamily="Segoe Print"
+                                   HorizontalAlignment="Center" FontSize="13" 
+                                   VerticalAlignment="Bottom" TextAlignment="Center" 
+                                   TextWrapping="Wrap"
+                                   Margin="5,0"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Grid.Row="1">
+                        <Button x:ConnectionId='15' x:Name="unterhaltung" 
+                                Style="{StaticResource RundeButtonUserStyle}"
+                                HorizontalAlignment="Center"
+                                Content="&#xF116;" 
+                                FontFamily="{StaticResource CinemaIcon}" 
+                                FontWeight="Bold" Foreground="White" 
+                                FontSize="34" Padding="8,0,4,4" 
+                                                             />
+                        <TextBlock x:ConnectionId='16' x:Name="txtUnterhaltung" Foreground="White" 
+                                   HorizontalAlignment="Center" FontSize="13" 
+                                   VerticalAlignment="Bottom" Margin="5,0" TextAlignment="Center" 
+                                   FontFamily="Segoe Print" TextWrapping="Wrap"
+                                   Text="Unterhaltung"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="1">
+                        <Button x:ConnectionId='13' x:Name="allInHouse"                            
+                                Style="{StaticResource RundeButtonUserStyle}" 
+                                Content="&#xE1C3;" 
+                                HorizontalAlignment="Center"
+                                FontFamily="Segoe MDL2 Assets" 
+                                Foreground="White" FontSize="30"                         />
+                        <TextBlock x:ConnectionId='14' x:Name="txtHaus" Text="Für Haus" Foreground="White"
+                                   HorizontalAlignment="Center" FontSize="13"
+                                   VerticalAlignment="Bottom" Margin="5,0"
+                                   TextWrapping="Wrap" TextAlignment="Center"
+                                   FontFamily="Segoe Print"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2">
+                        <Button x:ConnectionId='11' x:Name="transport" 
+                                Style="{StaticResource RundeButtonUserStyle}"
+                                HorizontalAlignment="Center"
+                                Content="&#xE7C0;" 
+                                FontFamily="Segoe MDL2 Assets" 
+                                Foreground="White" FontSize="30" 
+                                                          />
+                        <TextBlock x:ConnectionId='12' x:Name="txtVerkehr" Text="Verkehr" Foreground="White" 
+                                   HorizontalAlignment="Center" FontSize="13" 
+                                   VerticalAlignment="Bottom" Margin="5,0" 
+                                   TextWrapping="Wrap" TextAlignment="Center"
+                                   FontFamily="Segoe Print"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Grid.Row="2">
+                        <Button x:ConnectionId='9' x:Name="personKosten"
+                                Style="{StaticResource RundeButtonUserStyle}"
+                                HorizontalAlignment="Center"
+                                Content="&#xF123;" 
+                                FontFamily="{StaticResource SpaIcon}" 
+                                Foreground="White" FontSize="30" 
+                                                             />
+                        <TextBlock x:ConnectionId='10' x:Name="txtPersonal" Text="Personal" Foreground="White" 
+                                   HorizontalAlignment="Center" FontSize="13" 
+                                   VerticalAlignment="Bottom" Margin="5,0"
+                                   TextWrapping="Wrap" TextAlignment="Center"
+                                   FontFamily="Segoe Print"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Grid.Row="2">
+                        <Button x:ConnectionId='7' x:Name="others" 
+                                Style="{StaticResource RundeButtonUserStyle}" 
+                                HorizontalAlignment="Center"
+                                Content="&#xE734;" 
+                                FontFamily="Segoe MDL2 Assets" 
+                                Foreground="White" FontSize="30"                      
+                                />
+                        <TextBlock x:ConnectionId='8' x:Name="txtSonst" Text="Sonstige" Foreground="White" 
+                                   HorizontalAlignment="Center" FontSize="13" 
+                                   VerticalAlignment="Bottom" Margin="5,0"
+                                   TextWrapping="Wrap" TextAlignment="Center"
+                                   FontFamily="Segoe Print"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+

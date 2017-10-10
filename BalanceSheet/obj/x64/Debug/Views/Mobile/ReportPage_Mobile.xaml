@@ -1,0 +1,190 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="BalanceSheet.Views.Mobile.ReportPage_Mobile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Views.Mobile"
+    xmlns:controls="using:BalanceSheet.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:BalanceSheet.Models"
+    mc:Ignorable="d"  FontFamily="Segoe Print" Margin="0,-23,0,0"                      >
+
+    <Page.Resources>
+
+        <!-- When using x:Bind, you need to set x:DataType -->
+        <DataTemplate x:ConnectionId='2' x:Name="BalanceListViewTemplate" 
+                                                   >
+            <Grid x:ConnectionId='3'>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:ConnectionId='4' Foreground="White"
+                         Grid.RowSpan="2"
+                           Width="90"
+                                              
+                           TextAlignment="Right"
+                           
+                         VerticalAlignment="Center" HorizontalAlignment="Center"
+                         />
+                <TextBlock x:ConnectionId='5' Foreground="White" 
+                           Grid.Column="1"
+                                                
+                                        
+                           Style="{ThemeResource BaseTextBlockStyle}"
+                           Margin="12,6,0,0"/>
+                <TextBlock x:ConnectionId='6' Foreground="White"
+                           Grid.Column="1"
+                            Grid.Row="1"
+                                                     
+                                       
+                            Style="{ThemeResource BodyTextBlockStyle}"
+                            Margin="12,0,0,6"/>
+            </Grid>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Grid x:ConnectionId='7' x:Name="mainGrid" Background="#FF119DDA" Margin="0">
+        <Grid x:ConnectionId='8' x:Name="gridContentMain">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <controls:PageHeader Grid.Row="0" Margin="0,25,0,0">
+                <controls:PageHeader.HeaderContent>
+                    <TextBlock/>
+                </controls:PageHeader.HeaderContent>
+            </controls:PageHeader>
+
+            <Grid Grid.Row="1">
+                <Pivot x:ConnectionId='11' x:Name="pivotMain" FontFamily="Segoe Print" Foreground="White" Margin="0,10,0,10"                                              >
+                    <PivotItem x:ConnectionId='12' x:Name="pivotFixKosten" Header="Fixkosten" 
+                           Margin="0">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='15' x:Name="FixkostenListView" 
+                      Background="#FF45B8EA"
+                  SelectionMode="Extended"
+                                                       
+                  IsItemClickEnabled="True"
+                      ItemsSource="{Binding}"
+                  ItemTemplate="{StaticResource BalanceListViewTemplate }"
+                  ShowsScrollingPlaceholders="False"
+                                         
+                  Grid.Row="4" Margin="5,0,5,5"                                  >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="2,0"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:ConnectionId='13' x:Name="pivotLebensmittel" Header="Lebensmittel" Margin="0" >
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                            <ListView x:ConnectionId='14' x:Name="LebensmittelListView" 
+                      Background="#FF45B8EA"
+                  SelectionMode="Extended"
+                                                       
+                  IsItemClickEnabled="True"
+                      ItemsSource="{Binding}"
+                  ItemTemplate="{StaticResource BalanceListViewTemplate }"
+                  ShowsScrollingPlaceholders="False"
+                                         
+                  Grid.Row="4" Margin="5,0,5,5"                                     >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" 
+                                Value="Stretch" />
+                                        <Setter Property="Margin" Value="2,0"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Auto">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Bildung">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Apps/Service">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Urlaub">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Unterhaltung">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Für Haus">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Verkehr">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Personal">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Sonstige Ausgaben">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Gehalt">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem Header="Sonstige Einkommen">
+                        <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        </Grid>
+                    </PivotItem>
+                </Pivot>
+            </Grid>
+        </Grid>
+
+        <Grid x:ConnectionId='9' x:Name="gridContentTemp" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Bitte wählen Sie Datum oder Datumsbereich aus" Foreground="White" FontSize="16" Margin="10,30,10,10" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+            <DatePicker Grid.Row="1" Foreground="White" Style="{StaticResource DatePickerUserStyle}" HorizontalAlignment="Center" Background="#FF403C3C"/>
+            <DatePicker Grid.Row="2" Foreground="White" Style="{StaticResource DatePickerUserStyle}" HorizontalAlignment="Center" Background="#FF403C3C"/>
+            <Button x:ConnectionId='10' x:Name="btnWeiter" Grid.Row="3" Foreground="White" FontSize="16"  HorizontalAlignment="Center" Content="Weiter" Height="90" Width="90" Style="{StaticResource RundeButtonUserStyle}" FontFamily="Segoe Print"                        />
+
+        </Grid>
+
+    </Grid>
+</Page>
+

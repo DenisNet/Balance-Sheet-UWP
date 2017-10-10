@@ -1,0 +1,52 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="BalanceSheet.Views.Mobile.IntervalDatum"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Views.Mobile"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Margin="0,-23,0,0" FontFamily="Segoe Print"                     >
+
+    <Grid Background="#FF119DDA" Opacity="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="0,10,0,0">
+            <TextBlock x:ConnectionId='7' x:Name="txtChoose" Text="Bitte wählen Sie Ihr gewünschte Datum, oder ein Datumsbereich" TextWrapping="Wrap" Opacity="1" Foreground="White" Margin="20,20,20,10" FontSize="16"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <CheckBox x:ConnectionId='6' x:Name="CheckInterval" Content="Datumsbereich wählen" Foreground="White" Margin="20,10,20,10" HorizontalAlignment="Left"                                                                        FontFamily="Segoe Print" Style="{StaticResource UserCheckBox}" IsChecked="False"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <CheckBox x:ConnectionId='5' x:Name="CheckGleichDatumInterval" Content="Für alle Kategorie gleiche Datum oder  Datumsbereich wählen" Foreground="White" Margin="20,10,20,10" HorizontalAlignment="Left" Style="{StaticResource UserCheckBox}" FontFamily="Segoe Print" IsChecked="False"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <StackPanel>
+                <Rectangle Height="1" Fill="White" Margin="10"/>
+                <DatePicker x:ConnectionId='4' x:Name="DatePickerFirst" VerticalAlignment="Center" Foreground="White" Style="{StaticResource DatePickerUserStyle}" HorizontalAlignment="Center"                                 />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="4">
+            <StackPanel>
+                <Rectangle Height="1" Fill="White" Margin="10"/>
+                <DatePicker x:ConnectionId='3' x:Name="DatePickerSeconder" Style="{StaticResource DatePickerUserStyle}"  HorizontalAlignment="Center"
+                    Foreground="White" IsEnabled="False"                                   />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Rectangle Grid.Row="1" Height="1" Fill="White" Margin="10"/>
+        </Grid>
+
+        <Grid Grid.Row="6">
+            <Button x:ConnectionId='2' x:Name="btnNext" Content="Weiter" Foreground="White" HorizontalAlignment="Center" FontFamily="Segoe Print" FontSize="16"                      Style="{StaticResource RundeButtonUserStyle}" Height="90" Width="90"/>
+        </Grid>
+
+    </Grid>
+</Page>
+

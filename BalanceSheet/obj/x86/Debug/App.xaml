@@ -1,0 +1,20 @@
+﻿<Application
+    x:Class="BalanceSheet.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Styles"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Styles/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <FontFamily x:Key="TravelIcon">/Styles/FontFamilysStyle/Travel.ttf#Flaticon</FontFamily>
+            <FontFamily x:Key="CinemaIcon">/Styles/FontFamilysStyle/Cinema.ttf#Flaticon</FontFamily>
+            <FontFamily x:Key="SpaIcon">/Styles/FontFamilysStyle/Spa.ttf#Flaticon</FontFamily>
+            <FontFamily x:Key="FoodIcon">/Styles/FontFamilysStyle/Food.ttf#Flaticon</FontFamily>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+

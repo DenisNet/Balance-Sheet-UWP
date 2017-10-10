@@ -1,0 +1,76 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="BalanceSheet.Views.Mobile.Statistik_Mobile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet.Views.Mobile"
+    xmlns:controls="using:BalanceSheet.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:charting="using:BalanceSheet.Controls.Chart.PivotChart"
+    mc:Ignorable="d" FontFamily="Segoe Print" Margin="0,-23,0,0">
+
+    <Grid Background="#FF119DDA" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="0,25,0,0">
+            <controls:UserControlHeader x:ConnectionId='9'                                                                          />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Pivot x:ConnectionId='2' x:Name="pivotMain" Title="Ausgaben" FontFamily="Segoe Print" Foreground="White" Margin="0,10,0,10"                                              >
+                <PivotItem x:ConnectionId='3' x:Name="pivotFixKosten" Header="Fixkosten" 
+                           Margin="0">
+                    <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        <charting:PivotChartModelDaten
+                            HorizontalAlignment="Center"
+                            FontFamily="Segoe Print"/>
+                    </Grid>
+                </PivotItem>
+                <PivotItem x:ConnectionId='4' x:Name="pivotLebensmittel" Header="Lebensmittel" Margin="0">
+                    <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        <charting:PivotChartModelDaten
+                            HorizontalAlignment="Center"
+                            FontFamily="Segoe Print"/>
+                    </Grid>
+                </PivotItem>
+                <PivotItem x:ConnectionId='5' x:Name="pivotAuto" Header="Auto">
+                    <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        <charting:PivotChartModelDaten
+                            HorizontalAlignment="Center"
+                            FontFamily="Segoe Print"/>
+                    </Grid>
+                </PivotItem>
+                <PivotItem x:ConnectionId='6' x:Name="pivotUnterhaltung" Header="Unterhaltung">
+                    <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        <charting:PivotChartModelDaten
+                            HorizontalAlignment="Center"
+                            FontFamily="Segoe Print"/>
+                    </Grid>
+                </PivotItem>
+                <PivotItem x:ConnectionId='7' x:Name="pivotVerkehr" Header="Verkehr">
+                    <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        <charting:PivotChartModelDaten
+                            HorizontalAlignment="Center"
+                            FontFamily="Segoe Print"/>
+                    </Grid>
+                </PivotItem>
+                <PivotItem x:ConnectionId='8' x:Name="pivotPersonal" Header="Personal">
+                    <Grid VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch" Margin="0">
+                        <charting:PivotChartModelDaten
+                            HorizontalAlignment="Center"
+                            FontFamily="Segoe Print"/>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+    </Grid>
+</Page>
+
